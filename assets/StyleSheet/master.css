@@ -1,0 +1,479 @@
+:root {
+    --bordercolor: #e5edf5;
+    --textblack: #061b31;
+    /* --:; */
+    /* --:; */
+    /* --:; */
+}
+
+body {
+    overflow: hidden;
+    height: 200vh;
+}
+
+section {
+    border: 1px solid var(--bordercolor);
+}
+
+@keyframes waveScale {
+
+    0%,
+    100% {
+        background-size: 100% 100%;
+        background-position: 300px 0;
+    }
+
+    50% {
+        background-size: 140% 100%;
+        background-position: -80px 0;
+    }
+}
+
+/*==================#1 HEADER STYLE ==================*/
+/*====================================================*/
+header {
+    width: 100%;
+    height: 100%;
+    max-height: 80vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: start;
+    justify-content: center;
+    background-image: url(../Images/Hero\ Wave.png);
+    background-repeat: no-repeat;
+    animation: waveScale 20s ease-in-out infinite;
+    position: relative;
+
+
+    >section {
+        width: 100%;
+        max-width: 1265px;
+        border: none;
+        display: flex;
+        flex-wrap: wrap;
+
+        /*==================#1-1 MENU STYLE ==================*/
+        &:first-of-type {
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 10px;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.001);
+            transition: 0.4s;
+            position: relative;
+
+            >div {
+                display: flex;
+                align-items: center;
+                margin-right: 20px;
+
+                /* left */
+                &:first-of-type {
+
+                    /* logo */
+                    >a {
+                        display: flex;
+                        width: 65px;
+                        height: 27px;
+                        position: relative;
+                        margin-right: 30px;
+
+                        >img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: contain;
+                        }
+
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            top: 50%;
+                            left: 50%;
+                            width: 110%;
+                            height: 110%;
+                            background-color: rgba(220, 220, 220, 0.445);
+                            transform: translate(-50%, -50%);
+                            opacity: 0;
+                            transition: 0.4s;
+                            border-radius: 15px;
+                        }
+
+                        &:hover {
+                            &::before {
+                                opacity: 1;
+                            }
+                        }
+                    }
+
+                    /* nav */
+                    >nav {
+
+                        >ul {
+                            display: flex;
+
+
+
+                            >li {
+                                display: flex;
+                                height: 100%;
+                                height: 40px;
+
+                                >* {
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                }
+
+                                >a {
+                                    height: 100%;
+                                    padding: 0 20px;
+                                    column-gap: 3px;
+                                    color: var(--textblack);
+                                    font-weight: 400;
+                                    font-size: 14px;
+                                    font-family: sans-serif;
+                                    text-transform: capitalize;
+
+                                    >i {
+                                        font-size: 14px;
+                                        transition: 0.4s;
+                                    }
+                                }
+
+
+                                /* drop downs */
+                                >div {
+                                    width: 100%;
+                                    max-width: 1265px;
+                                    position: absolute;
+                                    top: 100%;
+                                    left: 50%;
+                                    transform: translate(-50%, 0);
+                                    display: flex;
+                                    align-items: start;
+                                    justify-content: center;
+                                    background-color: white;
+                                    column-gap: 2%;
+                                    z-index: 10;
+                                    opacity: 0;
+                                    visibility: hidden;
+                                    transition: 0.4s;
+                                    border-bottom: 1px solid var(--bordercolor);
+                                    border-top: 1px solid var(--bordercolor);
+
+                                    >div {
+                                        width: 18%;
+                                        padding: 30px 20px;
+
+                                        >h6 {
+                                            font-size: 14px;
+                                            color: var(--textblack);
+                                            border-bottom: 1px solid var(--bordercolor);
+                                            transition: 0.4s;
+                                            padding-bottom: 20px;
+                                            text-transform: capitalize;
+                                        }
+
+                                        >ul {
+                                            display: flex;
+                                            flex-wrap: wrap;
+                                            align-content: start;
+                                            row-gap: 15px;
+                                            margin-top: 20px;
+
+                                            >li {
+                                                width: 100%;
+                                                display: flex;
+                                                flex-wrap: wrap;
+                                                row-gap: 3px;
+
+                                                >* {
+                                                    font-size: 14px;
+                                                    width: 100%;
+                                                    text-transform: capitalize;
+                                                }
+
+                                                >a {
+                                                    color: #0800ff;
+                                                    display: flex;
+                                                    justify-content: start;
+                                                    align-items: center;
+
+                                                    >i {
+                                                        opacity: 0;
+                                                        margin-left: 7px;
+                                                        font-size: 14px;
+                                                        transition: 0.4s;
+                                                    }
+                                                }
+
+                                                >span {
+                                                    color: #666666;
+                                                }
+
+                                                &::after {
+                                                    content: "";
+                                                    width: 200vw;
+                                                    height: 100vh;
+                                                    position: absolute;
+                                                    top: 0;
+                                                    left: -50%;
+                                                    background-color: rgba(244, 247, 252, 0.014);
+                                                    z-index: -1;
+                                                    opacity: 0;
+                                                    visibility: hidden;
+                                                    pointer-events: none;
+                                                }
+                                            }
+
+                                        }
+
+                                        &:nth-of-type(4) {
+
+                                            >h6 {
+                                                font-size: 13px;
+                                                font-weight: bold;
+                                            }
+                                        }
+
+                                        &:last-of-type {
+                                            border-left: 1px solid var(--bordercolor);
+                                            padding: 30px;
+                                            width: 270px;
+                                            height: 100%;
+                                            background-color: #f8fafd;
+
+                                            >h6 {
+                                                border-bottom: 1px solid transparent;
+                                            }
+
+                                            >ul {
+                                                margin-bottom: 80px;
+                                            }
+
+                                            >figure {
+
+                                                >img {
+                                                    width: 100%;
+                                                    height: 100%;
+                                                    object-fit: contain;
+                                                }
+
+                                                >figcaption {
+                                                    background-color: white;
+                                                    padding: 10px 5px;
+                                                    display: flex;
+                                                    flex-wrap: wrap;
+
+                                                    >p {
+                                                        font-size: 14px;
+                                                        width: 100%;
+                                                        color: var(--textblack);
+                                                    }
+
+                                                    >span {
+                                                        width: 100%;
+                                                        color: gray;
+                                                        font-size: 13px;
+                                                    }
+
+                                                    >a {
+                                                        font-size: 14px;
+                                                        color: #0800ff;
+                                                        margin-top: 20px;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+
+
+                                }
+
+                                &:nth-of-type(3) {
+                                    >div {
+
+                                        >div {
+                                            width: 33%;
+                                        }
+                                    }
+                                }
+
+                                &:nth-of-type(2),
+                                &:nth-of-type(4) {
+                                    >div {
+
+                                        >div {
+                                            width: 24%;
+                                        }
+                                    }
+                                }
+
+                                &:nth-of-type(2) {
+                                    >div {
+                                        >div {
+
+                                            &:last-of-type {
+                                                height: 450px;
+                                            }
+                                        }
+                                    }
+                                }
+
+
+
+                                &:hover {
+                                    >a {
+                                        >i {
+                                            transform: rotate(180deg);
+                                        }
+                                    }
+
+                                    >div {
+                                        opacity: 1;
+                                        visibility: visible;
+
+                                        >div {
+
+                                            &:hover {
+                                                >h6 {
+                                                    border-bottom: 1px solid;
+                                                    border-image: linear-gradient(90deg, #31f10b, #fe002a) 1;
+                                                }
+                                            }
+
+                                            >ul {
+
+                                                >li {
+
+                                                    &:hover {
+
+                                                        >a {
+                                                            color: #4934cf;
+
+                                                            >i {
+                                                                opacity: 1;
+                                                            }
+                                                        }
+
+                                                        >span {
+                                                            color: #061b31;
+                                                        }
+                                                    }
+
+                                                    &::after {
+                                                        opacity: 1;
+                                                        visibility: visible;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    ~li {
+                                        >a {
+                                            color: gray;
+                                        }
+                                    }
+                                }
+
+                                &:has(~li:hover)>a {
+                                    color: gray;
+                                }
+
+                            }
+                        }
+                    }
+                }
+
+                /* right */
+                &:last-of-type {
+                    column-gap: 10px;
+
+                    >a {
+                        padding: 10px;
+                        border-radius: 5px;
+                        font-size: 14px;
+                        font-weight: bold;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        transition: 0.4s;
+                        border: 1px solid transparent;
+
+                        >i {
+                            font-size: 14px;
+                            margin-left: 10px;
+                        }
+
+                        &:first-of-type {
+                            color: rgb(233, 155, 10);
+                            background-color: white;
+
+                        }
+
+                        &:last-of-type {
+                            color: white;
+                            background-color: #533afd;
+                        }
+                    }
+                }
+            }
+
+            /* &::before {
+                content: "";
+                background-color: var(--bordercolor);
+                width: 100%;
+                height: 1px;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                z-index: 2;
+            }
+
+            &::after {
+                content: "";
+                background-color: var(--bordercolor);
+                width: 100%;
+                height: 1px;
+                position: absolute;
+                top: 10.7%;
+                left: 0;
+                z-index: 2;
+            } */
+
+            &:hover {
+                background-color: white;
+                box-shadow: 0 0 50px 5px rgba(128, 128, 128, 0.342);
+
+
+                >div {
+                    &:first-of-type {
+                        >nav {
+                            >ul {
+                                >li {}
+                            }
+                        }
+                    }
+
+                    &:last-of-type {
+
+                        >a {
+                            &:first-of-type {
+                                border: 1px solid var(--bordercolor);
+                                color: #0800ff;
+                            }
+                        }
+                    }
+
+                }
+
+
+            }
+        }
+
+        /*==================#1-2 HERO STYLE ==================*/
+        &:last-of-type {}
+    }
+}
