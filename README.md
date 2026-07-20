@@ -4,7 +4,7 @@ This project is currently under development and is being recreated as part of my
 
 ## 🚀 Live Demo
 
-👉 Coming soon.
+👉 https://ali-mirzaei-dev.github.io/Stripe-Website/
 
 ## 📸 Screenshots
 
