@@ -6,13 +6,13 @@
     /* --:; */
 }
 
-body {
-    overflow: hidden;
-    height: 200vh;
-}
+body {}
 
 section {
-    border: 1px solid var(--bordercolor);
+    border-right: 1px solid var(--bordercolor);
+    border-left: 1px solid var(--bordercolor);
+    width: 100%;
+    max-width: 1265px;
 }
 
 @keyframes waveScale {
@@ -25,16 +25,150 @@ section {
 
     50% {
         background-size: 140% 100%;
-        background-position: -80px 0;
+        background-position: -180px 0;
     }
 }
+
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes circle {
+    50% {
+        background-size: 180% 80%;
+    }
+}
+
+@keyframes globe {
+    50% {
+        background-size: 110% 70%;
+    }
+
+}
+
+@keyframes mobile1 {
+
+    0%,
+    40%,
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    50% {
+        opacity: 0;
+        transform: translateY(-35px);
+    }
+
+    50%,
+    90% {
+        opacity: 0;
+        transform: translateY(-35px);
+    }
+
+    91%,
+    95% {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+}
+
+@keyframes mobile2 {
+
+    0%,
+    40% {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    /* Move into place */
+    50% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    50%,
+    90% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-35px);
+    }
+}
+
+@keyframes bar {
+
+    from {
+        width: 10%;
+    }
+
+    50% {
+        width: 100%;
+    }
+
+    to {
+        width: 10%;
+    }
+
+}
+
+@keyframes barscale1 {
+
+    50% {
+        transform: scaleY(1.1);
+        background-color: #4441fd;
+
+    }
+}
+
+@keyframes barscale2 {
+
+    50% {
+        transform: scaleY(1.3);
+        background-color: #4441fd;
+
+    }
+}
+
+@keyframes credit {
+
+    from {
+        background-size: 100% 100%;
+    }
+
+    50% {
+        background-size: 110% 120%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*==================#1 HEADER STYLE ==================*/
 /*====================================================*/
 header {
     width: 100%;
-    height: 100%;
-    max-height: 80vh;
+    height: 90vh;
     display: flex;
     flex-wrap: wrap;
     align-content: start;
@@ -43,29 +177,29 @@ header {
     background-repeat: no-repeat;
     animation: waveScale 20s ease-in-out infinite;
     position: relative;
-
+    overflow: hidden;
 
     >section {
-        width: 100%;
-        max-width: 1265px;
-        border: none;
+
         display: flex;
         flex-wrap: wrap;
 
         /*==================#1-1 MENU STYLE ==================*/
         &:first-of-type {
+            width: 100%;
+            height: 10%;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 10px;
+            padding: 0 10px;
             border-radius: 5px;
             background-color: rgba(255, 255, 255, 0.001);
             transition: 0.4s;
+            border: none;
             position: relative;
 
             >div {
                 display: flex;
                 align-items: center;
-                margin-right: 20px;
 
                 /* left */
                 &:first-of-type {
@@ -218,7 +352,7 @@ header {
                                                     position: absolute;
                                                     top: 0;
                                                     left: -50%;
-                                                    background-color: rgba(244, 247, 252, 0.014);
+                                                    background-color: rgba(244, 247, 252, 0.03);
                                                     z-index: -1;
                                                     opacity: 0;
                                                     visibility: hidden;
@@ -421,27 +555,18 @@ header {
                 }
             }
 
-            /* &::before {
+            &::before {
                 content: "";
                 background-color: var(--bordercolor);
-                width: 100%;
+                width: 200%;
                 height: 1px;
                 position: absolute;
                 top: 100%;
-                left: 0;
+                left: -30%;
                 z-index: 2;
             }
 
-            &::after {
-                content: "";
-                background-color: var(--bordercolor);
-                width: 100%;
-                height: 1px;
-                position: absolute;
-                top: 10.7%;
-                left: 0;
-                z-index: 2;
-            } */
+
 
             &:hover {
                 background-color: white;
@@ -474,6 +599,1556 @@ header {
         }
 
         /*==================#1-2 HERO STYLE ==================*/
-        &:last-of-type {}
+        &:last-of-type {
+            height: 90%;
+
+            >div {
+                display: flex;
+                align-content: start;
+
+                /* content */
+                &:first-of-type {
+                    flex-wrap: wrap;
+                    justify-content: start;
+                    padding: 70px 130px;
+                    gap: 40px 10px;
+
+                    >p {
+                        width: 100%;
+                        font-size: 16px;
+                        color: var(--textblack);
+                        margin-bottom: 10px;
+
+                        >span {
+                            font-size: 14px;
+                            color: #64748d;
+                        }
+                    }
+
+                    >h1 {
+                        width: 100%;
+                        font-size: 44px;
+                        color: var(--textblack);
+                        line-height: 1.1;
+                        font-weight: 300;
+                        text-wrap: balance;
+                    }
+
+                    >a {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 5px;
+                        padding: 15px 25px;
+                        border: 1px solid #0800ff;
+                        transition: 0.4s;
+                        column-gap: 10px;
+
+                        &:first-of-type {
+                            color: white;
+                            background-color: #0800ff;
+                        }
+
+                        &:last-of-type {
+                            color: #0800ff;
+
+                        }
+
+                        &:hover {
+
+                            &:first-of-type {
+                                background-color: #4032c8;
+                            }
+
+                            &:last-of-type {
+                                border: 1px solid #080075;
+                                color: #080075;
+                            }
+                        }
+
+                    }
+                }
+
+                /* logos */
+                &:last-of-type {
+                    border-top: 1px solid var(--bordercolor);
+                    height: 82px;
+                    overflow: hidden;
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                    max-width: 1263px;
+                    z-index: -2;
+
+                    >div {
+                        animation: marquee 20s linear infinite;
+                        display: flex;
+
+                        >a {
+
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            font-size: 22px;
+                            width: 140px;
+
+                            >i {
+                                margin-right: 5px;
+                            }
+
+
+                            &:first-of-type,
+                            &:nth-of-type(15) {
+                                font-size: 60px;
+                                color: #013579;
+                            }
+
+                            &:nth-of-type(2) {}
+
+                            &:nth-of-type(3),
+                            &:nth-of-type(17) {
+
+                                >span {
+
+                                    &:first-of-type,
+                                    &:nth-of-type(15) {
+                                        color: #4285f4;
+                                    }
+
+                                    &:nth-of-type(2) {
+                                        color: red;
+                                    }
+
+                                    &:nth-of-type(3) {
+                                        color: gold;
+                                    }
+
+                                    &:nth-of-type(4) {
+                                        color: #4285f4;
+                                    }
+
+                                    &:nth-of-type(5) {
+                                        color: green;
+                                    }
+
+                                    &:last-of-type {
+                                        color: red;
+                                    }
+                                }
+                            }
+
+                            &:nth-of-type(4),
+                            &:nth-of-type(18) {
+
+                                >i {
+                                    color: rgb(28, 163, 28);
+                                }
+                            }
+
+
+                            &:nth-of-type(8),
+                            &:nth-of-type(22) {
+                                color: purple;
+                            }
+
+
+
+                            &:nth-of-type(12),
+                            &:nth-of-type(26) {
+                                >i {
+                                    color: orange;
+                                }
+                            }
+
+                            &:nth-of-type(14),
+                            &:nth-of-type(28) {
+                                >i {
+                                    color: limegreen;
+                                }
+                            }
+                        }
+                    }
+
+                    &:hover {
+                        >div {
+                            animation-play-state: paused;
+                        }
+                    }
+                }
+
+                &::before {
+                    content: "";
+                    background-color: var(--bordercolor);
+                    width: 200%;
+                    height: 1px;
+                    position: absolute;
+                    top: 100%;
+                    left: -30%;
+                    z-index: 2;
+                }
+            }
+        }
+    }
+}
+
+
+/*=================#2 CONTENT STYLE =================*/
+/*===================================================*/
+main {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: start;
+
+    >section {
+
+        /*==================#2-1 FLEXIBLE SOLUTION STYLE ==================*/
+        &:first-of-type {
+            max-width: 100%;
+            background-color: #fafbfd;
+            border: none;
+            border-top: 1px solid var(--bordercolor);
+            border-bottom: 1px solid var(--bordercolor);
+            display: flex;
+            justify-content: center;
+            align-items: start;
+
+            /* inner box */
+            >div {
+                padding: 100px 20px 40px;
+                width: 100%;
+                max-width: 1265px;
+                border-right: 1px solid var(--bordercolor);
+                border-left: 1px solid var(--bordercolor);
+                display: flex;
+                flex-wrap: wrap;
+                align-content: start;
+
+                >div {
+
+                    /* title */
+                    &:first-of-type {
+                        width: 100%;
+                        margin-bottom: 70px;
+
+                        >h2 {
+                            width: 80%;
+                            font-size: 32px;
+                            color: var(--textblack);
+                            text-wrap: balance;
+                            font-weight: 400;
+
+                            >span {
+                                font-size: 32px;
+                                color: #64748d;
+                            }
+                        }
+                    }
+
+                    /* middle content */
+                    &:nth-of-type(2) {
+                        display: grid;
+                        grid-template-columns: repeat(3, 400px);
+                        grid-template-rows: repeat(8, 240px);
+                        gap: 10px;
+
+                        /* cards */
+                        >div {
+                            border: 1px solid var(--bordercolor);
+                            border-radius: 5px;
+                            padding: 30px 25px;
+                            display: flex;
+                            flex-wrap: wrap;
+                            align-content: start;
+                            overflow: hidden;
+                            transition: 0.4s;
+
+                            >div {
+                                display: flex;
+
+                                &:first-of-type {
+                                    width: 100%;
+                                    position: relative;
+
+                                    >h3 {
+                                        font-size: 25px;
+                                        color: var(--textblack);
+                                        font-weight: normal;
+                                    }
+
+                                    >i {
+                                        color: #0800ff;
+                                        background-color: #f5f5ff;
+                                        padding: 12px;
+                                        position: absolute;
+                                        top: 0px;
+                                        right: 0;
+                                        transition: 0.4s;
+                                        border-radius: 5px;
+                                    }
+                                }
+                            }
+
+                            /* 1 */
+                            &:first-of-type {
+                                grid-area: 1 / 1 / span 3 / span 2;
+                                background-image: url(../Images/payment-bento-background.webp);
+                                background-position: bottom;
+                                background-repeat: no-repeat;
+                                background-size: cover;
+                                padding: 30px 0px 0px 0px;
+                                position: relative;
+                                row-gap: 80px;
+
+                                >div {
+
+                                    /* title */
+                                    &:first-of-type {
+                                        padding-left: 25px;
+
+                                        >h3 {
+                                            width: 50%;
+                                        }
+
+                                        >i {
+                                            right: 25px;
+                                        }
+                                    }
+
+                                    /* phone */
+                                    &:nth-of-type(2) {
+                                        position: relative;
+
+                                        >img {
+                                            height: 525px;
+                                        }
+
+                                        >div {
+                                            width: 198px;
+                                            padding: 25px 8px 0;
+                                            display: flex;
+                                            flex-wrap: wrap;
+                                            justify-content: center;
+                                            align-content: start;
+                                            position: absolute;
+                                            top: 34px;
+                                            left: 54px;
+
+
+
+                                            >i {
+                                                font-size: 30px;
+                                                margin-bottom: 20px;
+                                                color: #ff7434;
+                                            }
+
+                                            >span {
+                                                width: 100%;
+                                                text-align: center;
+                                                text-transform: capitalize;
+
+                                                &:first-of-type {
+                                                    font-size: 16px;
+                                                    color: var(--textblack);
+                                                }
+
+                                                &:nth-of-type(2) {
+                                                    font-size: 30px;
+                                                    color: var(--textblack);
+                                                    margin: 10px 0 15px;
+                                                }
+
+                                                &:nth-of-type(3) {
+                                                    font-size: 14px;
+                                                    color: rgb(83, 83, 83);
+                                                    margin-bottom: 30px;
+                                                }
+
+                                                &:last-of-type {
+                                                    padding: 8px;
+                                                    background-color: #ffe0d1;
+                                                    margin-top: 20px;
+                                                    border-radius: 8px;
+                                                    color: #ff7434;
+                                                }
+
+
+                                            }
+
+                                            >div {
+                                                width: 100%;
+                                                display: flex;
+                                                justify-content: space-between;
+                                                border-bottom: 1px solid gray;
+                                                padding: 5px 0;
+
+                                                >span {
+                                                    text-transform: capitalize;
+                                                    font-size: 14px;
+                                                }
+
+                                                &:first-of-type {}
+                                            }
+
+                                            &:first-of-type {
+                                                animation: mobile1 10s ease-in-out infinite;
+
+                                            }
+
+                                            &:last-of-type {
+                                                opacity: 0;
+                                                animation: mobile2 10s ease-in-out infinite;
+
+                                                >i {
+                                                    color: #ac7df3;
+                                                }
+
+                                                >span {
+                                                    &:last-of-type {
+                                                        background-color: #ac7df3;
+                                                        color: white;
+                                                    }
+                                                }
+                                            }
+
+                                        }
+                                    }
+
+                                    /* windows*/
+                                    &:nth-of-type(3),
+                                    &:last-of-type {
+                                        position: absolute;
+                                        top: 24%;
+                                        left: 38%;
+                                        width: 503px;
+                                        height: 81.5%;
+                                        border-radius: 15px 0 0 15px;
+                                        border: 1px solid var(--bordercolor);
+                                        background-color: rgba(240, 238, 238, 0.322);
+                                        backdrop-filter: blur(55px);
+                                        display: flex;
+                                        flex-wrap: wrap;
+                                        align-content: start;
+
+                                        >div {
+                                            width: 100%;
+                                            display: flex;
+                                            flex-wrap: wrap;
+                                            align-content: start;
+
+                                            /* top */
+                                            &:first-of-type {
+                                                padding: 10px 20px;
+
+                                                >i {
+                                                    font-size: 30px;
+                                                    color: rgb(202, 202, 202);
+                                                    width: 30%;
+                                                }
+
+                                                >div {
+                                                    display: flex;
+                                                    border-radius: 50px;
+                                                    padding: 5px 30px;
+                                                    background-color: rgba(255, 255, 255, 0.493);
+                                                    backdrop-filter: blur(15px);
+                                                    column-gap: 5px;
+                                                    color: rgb(95, 95, 95);
+                                                    font-size: 14px;
+                                                    align-items: center;
+                                                    justify-content: center;
+                                                }
+                                            }
+
+                                            /* bottom */
+                                            &:last-of-type {
+                                                margin-left: 7px;
+                                                background-color: white;
+                                                height: 100%;
+                                                border-radius: 8px 0 0 8px;
+
+                                                /* name */
+                                                >span {
+                                                    padding: 15px;
+                                                    text-transform: uppercase;
+                                                    font-weight: bold;
+                                                    font-size: 14px;
+                                                    width: 100%;
+                                                    border-bottom: 1px solid var(--bordercolor);
+                                                }
+
+                                                /* credit card & product */
+                                                >div {
+                                                    height: 100%;
+                                                    padding: 30px 15px;
+                                                    display: flex;
+                                                    flex-wrap: wrap;
+                                                    align-content: start;
+
+                                                    /* credit card */
+                                                    &:first-of-type {
+                                                        width: 60%;
+
+                                                        >span {
+                                                            text-transform: capitalize;
+                                                            width: 100%;
+
+                                                            &:first-of-type {
+                                                                font-size: 14px;
+
+                                                            }
+
+                                                            &:nth-of-type(2) {
+                                                                text-transform: none;
+                                                                border: 1px solid var(--bordercolor);
+                                                                padding: 5px 10px;
+                                                                margin: 8px 0 15px;
+                                                                border-radius: 5px;
+                                                            }
+
+                                                            &:nth-of-type(3) {
+                                                                font-size: 13px;
+                                                                margin-bottom: 15px;
+                                                                font-weight: bold;
+                                                            }
+                                                        }
+
+                                                        >p {
+                                                            width: 100%;
+                                                            margin: 15px 0 20px;
+                                                            display: flex;
+                                                            align-items: center;
+                                                            justify-content: space-between;
+
+                                                            >span {
+
+                                                                &:first-of-type,
+                                                                &:last-of-type {
+                                                                    width: 43%;
+                                                                    height: 2px;
+                                                                    background-color: var(--bordercolor);
+                                                                }
+
+                                                                &:nth-of-type(2) {
+                                                                    font-size: 13px;
+                                                                }
+                                                            }
+                                                        }
+
+                                                        >div {
+                                                            border: 1px solid var(--bordercolor);
+                                                            display: flex;
+                                                            flex-wrap: wrap;
+                                                            border-radius: 15px;
+
+                                                            >span {
+                                                                width: 100%;
+                                                                padding: 11px 30px;
+                                                                border-bottom: 1px solid var(--bordercolor);
+
+                                                                >i {
+                                                                    margin-right: 10px;
+                                                                }
+
+                                                                &:nth-of-type(1) {
+                                                                    >i {
+                                                                        color: blue;
+                                                                    }
+                                                                }
+
+                                                                &:nth-of-type(3) {
+                                                                    color: purple;
+                                                                }
+
+                                                                &:last-of-type {
+                                                                    border: none;
+                                                                }
+                                                            }
+                                                        }
+
+                                                        >a {
+                                                            width: 48%;
+                                                            display: flex;
+                                                            justify-content: center;
+                                                            align-items: center;
+                                                            padding: 7px;
+                                                            border-radius: 5px;
+                                                            text-transform: capitalize;
+
+                                                            >i {
+                                                                margin-right: 5px;
+                                                            }
+
+                                                            &:first-of-type {
+                                                                background-color: #00d66f;
+                                                                color: black;
+                                                                margin-right: 8px;
+
+
+                                                                >i {
+                                                                    border-radius: 50%;
+                                                                    color: white;
+                                                                    background-color: black;
+                                                                }
+                                                            }
+
+                                                            &:nth-of-type(2) {
+                                                                background-color: black;
+                                                                color: white;
+                                                            }
+
+                                                            &:nth-of-type(3) {
+                                                                width: 100%;
+                                                                background-color: #ffe0d1;
+                                                                color: #ff7a3d;
+                                                                margin-top: 20px;
+                                                            }
+                                                        }
+                                                    }
+
+                                                    /* product */
+                                                    &:last-of-type {
+                                                        padding: 30px 0 30px 15px;
+                                                        width: 40%;
+                                                        border-left: 1px solid var(--bordercolor);
+
+                                                        >* {
+                                                            width: 100%;
+                                                        }
+
+                                                        >span {
+                                                            font-size: 14px;
+                                                            text-transform: capitalize;
+                                                            text-wrap: nowrap;
+                                                        }
+
+                                                        >figure {
+                                                            margin: 15px 0 30px;
+                                                            display: flex;
+                                                            border: 1px solid var(--bordercolor);
+                                                            border-right: none;
+                                                            padding: 5px;
+                                                            column-gap: 7px;
+                                                            border-radius: 8px 0 0 8px;
+
+                                                            >img {
+                                                                width: 70px;
+                                                                height: 70px;
+                                                                object-fit: cover;
+                                                            }
+
+                                                            >figcaption {
+                                                                display: flex;
+                                                                flex-wrap: wrap;
+                                                                align-content: space-between;
+
+                                                                >span {
+                                                                    text-transform: capitalize;
+                                                                    font-size: 11px;
+                                                                    color: var(--textblack);
+                                                                }
+                                                            }
+
+
+                                                        }
+
+                                                        >div {
+                                                            display: flex;
+                                                            justify-content: space-between;
+                                                            padding: 10px 0;
+
+                                                            >span {
+                                                                text-transform: capitalize;
+                                                            }
+
+                                                            &:last-of-type {
+                                                                border-top: 1px solid var(--bordercolor);
+                                                                padding-top: 20px;
+                                                            }
+
+                                                        }
+                                                    }
+
+
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                    /* win 1 */
+                                    &:nth-of-type(3) {
+                                        opacity: 1;
+                                        animation: mobile1 10s ease-in-out infinite;
+                                    }
+
+                                    /* win 2 */
+                                    &:last-of-type {
+                                        opacity: 0;
+                                        animation: mobile2 10s ease-in-out infinite;
+
+                                        >div {
+                                            &:last-of-type {
+
+                                                >div {
+                                                    &:first-of-type {
+
+                                                        >a {
+
+                                                            &:first-of-type {}
+
+                                                            &:nth-of-type(2) {}
+
+                                                            &:last-of-type {
+                                                                background-color: #ac7df3;
+                                                                color: white;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+                                }
+                            }
+
+                            /* 2 */
+                            &:nth-of-type(2) {
+                                grid-area: 1 / 3 / span 3 / span 1;
+                                background: #ffffff;
+                                background: linear-gradient(180deg, #ffffff 35%, #fbc496 50%, rgba(212, 95, 215, 0.7) 60%, #8d7cfd 80%);
+                                transition: 0.4s;
+
+                                >div {
+                                    &:first-of-type {
+                                        margin-bottom: 80px;
+                                    }
+
+                                    &:nth-of-type(2),
+                                    &:nth-of-type(3) {
+                                        width: 100%;
+                                        flex-wrap: wrap;
+                                        align-content: start;
+                                        background-color: white;
+                                        border-radius: 8px;
+                                        border: 1px solid var(--bordercolor);
+                                        padding: 15px;
+                                    }
+
+                                    &:nth-of-type(2) {
+                                        margin: 38px 0;
+
+                                        >div {
+                                            width: 100%;
+
+                                            &:first-of-type {
+                                                display: flex;
+                                                column-gap: 10px;
+
+                                                >i {
+                                                    font-size: 20px;
+                                                    border: 1px solid var(--bordercolor);
+                                                    padding: 10px;
+                                                    border-radius: 0 5px 5px 0;
+                                                }
+
+                                                >div {
+                                                    display: flex;
+                                                    flex-wrap: wrap;
+                                                    align-content: center;
+
+                                                    >span {
+                                                        width: 100%;
+                                                        text-transform: capitalize;
+                                                        font-size: 15px;
+
+                                                        &:last-of-type {
+                                                            color: gray;
+                                                            font-size: 14px;
+                                                        }
+                                                    }
+                                                }
+                                            }
+
+                                            &:last-of-type {
+                                                height: 12px;
+                                                border-radius: 50px;
+                                                border: 1px solid var(--bordercolor);
+                                                position: relative;
+
+                                                &::before {
+                                                    content: "";
+                                                    width: 100%;
+                                                    height: 100%;
+                                                    border-radius: 50px;
+                                                    background: #ffffff;
+                                                    background: linear-gradient(270deg, #ffffff 35%, #fbb47a 50%, rgb(213, 97, 215) 65%, #6558be 80%);
+                                                    position: absolute;
+                                                    top: 0;
+                                                    left: 0;
+                                                    animation: bar 20s ease-in-out infinite;
+                                                }
+                                            }
+                                        }
+
+                                        >span {
+                                            width: 100%;
+                                            text-transform: capitalize;
+                                            font-size: 13px;
+
+                                            &:first-of-type {
+                                                margin: 20px 0 6px;
+                                            }
+
+                                            &:nth-of-type(2) {
+                                                color: gray;
+                                            }
+
+                                            &:last-of-type {
+                                                margin: 20px 0 8px;
+                                            }
+                                        }
+                                    }
+
+                                    &:nth-of-type(3) {
+
+                                        >span {
+                                            width: 100%;
+                                            font-size: 13px;
+                                            text-transform: capitalize;
+
+                                            &:last-of-type {
+                                                color: gray;
+                                            }
+                                        }
+
+                                        >div {
+                                            position: relative;
+                                            width: 100%;
+                                            height: 230px;
+
+                                            >div {
+                                                position: absolute;
+                                                bottom: 0;
+                                                width: 5px;
+                                                background-color: #7f7dfc;
+                                                transform-origin: bottom;
+
+                                                &:nth-of-type(1) {
+                                                    left: 0px;
+                                                    height: 20px;
+                                                }
+
+                                                &:nth-of-type(2) {
+                                                    left: 10px;
+                                                    height: 25px;
+                                                }
+
+                                                &:nth-of-type(3) {
+                                                    left: 20px;
+                                                    height: 30px;
+                                                }
+
+                                                &:nth-of-type(4) {
+                                                    left: 30px;
+                                                    height: 40px;
+                                                }
+
+                                                &:nth-of-type(5) {
+                                                    left: 40px;
+                                                    height: 50px;
+                                                }
+
+                                                &:nth-of-type(6) {
+                                                    left: 50px;
+                                                    height: 70px;
+                                                }
+
+                                                &:nth-of-type(7) {
+                                                    left: 60px;
+                                                    height: 100px;
+                                                }
+
+                                                &:nth-of-type(8) {
+                                                    left: 70px;
+                                                    height: 60px;
+                                                }
+
+                                                &:nth-of-type(9) {
+                                                    left: 80px;
+                                                    height: 70px;
+                                                }
+
+                                                &:nth-of-type(10) {
+                                                    left: 90px;
+                                                    height: 30px;
+                                                }
+
+                                                &:nth-of-type(11) {
+                                                    left: 100px;
+                                                    height: 20px;
+                                                }
+
+                                                &:nth-of-type(12) {
+                                                    left: 110px;
+                                                    height: 80px;
+                                                }
+
+                                                &:nth-of-type(13) {
+                                                    left: 120px;
+                                                    height: 70px;
+                                                }
+
+                                                &:nth-of-type(14) {
+                                                    left: 130px;
+                                                    height: 90px;
+                                                }
+
+                                                &:nth-of-type(15) {
+                                                    left: 140px;
+                                                    height: 120px;
+                                                }
+
+                                                &:nth-of-type(16) {
+                                                    left: 150px;
+                                                    height: 150px;
+                                                }
+
+                                                &:nth-of-type(17) {
+                                                    left: 160px;
+                                                    height: 115px;
+                                                }
+
+                                                &:nth-of-type(18) {
+                                                    left: 170px;
+                                                    height: 170px;
+                                                }
+
+                                                &:nth-of-type(19) {
+                                                    left: 180px;
+                                                    height: 200px;
+                                                }
+
+                                                &:nth-of-type(20) {
+                                                    left: 190px;
+                                                    height: 150px;
+                                                }
+
+                                                &:nth-of-type(21) {
+                                                    left: 200px;
+                                                    height: 120px;
+                                                }
+
+                                                &:nth-of-type(22) {
+                                                    left: 210px;
+                                                    height: 100px;
+                                                }
+
+                                                &:nth-of-type(23) {
+                                                    left: 220px;
+                                                    height: 70px;
+                                                }
+
+                                                &:nth-of-type(24) {
+                                                    left: 230px;
+                                                    height: 30px;
+                                                }
+
+                                                &:nth-of-type(25) {
+                                                    left: 240px;
+                                                    height: 50px;
+                                                }
+
+                                                &:nth-of-type(26) {
+                                                    left: 250px;
+                                                    height: 70px;
+                                                }
+
+                                                &:nth-of-type(27) {
+                                                    left: 260px;
+                                                    height: 80px;
+                                                }
+
+                                                &:nth-of-type(28) {
+                                                    left: 270px;
+                                                    height: 130px;
+                                                }
+
+                                                &:nth-of-type(29) {
+                                                    left: 280px;
+                                                    height: 110px;
+                                                }
+
+                                                &:nth-of-type(30) {
+                                                    left: 290px;
+                                                    height: 90px;
+                                                }
+
+                                                &:nth-of-type(31) {
+                                                    left: 300px;
+                                                    height: 80px;
+                                                }
+
+                                                &:nth-of-type(32) {
+                                                    left: 310px;
+                                                    height: 60px;
+                                                }
+
+                                            }
+                                        }
+                                    }
+                                }
+
+                                &:hover {
+                                    >div {
+                                        &:nth-of-type(3) {
+                                            >div {
+
+                                                >div {
+                                                    &:nth-of-type(7) {
+                                                        animation: barscale2 10s ease-in-out infinite;
+                                                    }
+
+                                                    &:nth-of-type(2) {
+                                                        animation: barscale2 10s ease-in-out infinite;
+                                                    }
+
+                                                    &:nth-of-type(19) {
+                                                        animation: barscale1 10s ease-in-out infinite;
+                                                    }
+
+                                                    &:nth-of-type(27) {
+                                                        animation: barscale2 10s ease-in-out infinite;
+                                                    }
+
+                                                    &:nth-of-type(28) {
+                                                        animation: barscale2 10s ease-in-out infinite;
+                                                    }
+
+                                                    &:nth-of-type(30) {
+                                                        animation: barscale2 10s ease-in-out infinite;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+
+                            /* 3 */
+                            &:nth-of-type(3) {
+                                grid-area: 4 / 1 / span 3 / span 1;
+                                background-image: url(../Images/background\ phone.png);
+                                background-size: 140% 70%;
+                                background-repeat: no-repeat;
+                                background-position: 45% 80%;
+                                background-color: #f4f2fe;
+                                animation: circle 10s linear infinite;
+                                position: relative;
+
+                                >div {
+                                    >h3 {
+                                        width: 60%;
+                                    }
+
+                                    &:nth-of-type(2),
+                                    &:nth-of-type(3),
+                                    &:nth-of-type(4) {
+                                        background-color: white;
+                                        border-radius: 12px;
+                                        padding: 15px;
+                                        font-size: 12px;
+                                        border: 1px solid var(--bordercolor);
+                                    }
+
+                                    &:nth-of-type(2) {
+                                        position: absolute;
+                                        top: 190px;
+                                        left: 100px;
+                                        width: 235px;
+
+                                    }
+
+                                    &:nth-of-type(3) {
+                                        margin-top: 200px;
+                                        width: 235px;
+                                    }
+
+                                    &:nth-of-type(4) {
+                                        margin-top: 20px;
+                                        display: flex;
+                                        flex-wrap: wrap;
+                                        gap: 10px;
+
+                                        >figure {
+                                            border: 1px solid var(--bordercolor);
+                                            background-color: #e9eff7;
+                                            width: 48%;
+                                            border-radius: 8px;
+                                            display: flex;
+                                            justify-content: center;
+                                            align-items: center;
+                                            flex-wrap: wrap;
+
+                                            >img {
+                                                width: 115px;
+                                                height: 115px;
+                                                object-fit: cover;
+                                            }
+
+                                            >figcaption {
+                                                width: 100%;
+                                                background-color: white;
+                                                display: flex;
+                                                flex-wrap: wrap;
+                                                align-content: start;
+                                                padding: 10px 5px;
+                                                border-radius: 8px;
+
+                                                >span {
+                                                    width: 100%;
+                                                    text-transform: capitalize;
+
+                                                    &:first-of-type {}
+
+                                                    &:nth-of-type(2) {
+                                                        margin: 3px 0 7px;
+                                                        color: #080075;
+                                                    }
+
+                                                    &:nth-of-type(3) {}
+
+                                                    &:last-of-type {
+                                                        color: #080075;
+                                                        margin-top: 7px;
+                                                    }
+                                                }
+                                            }
+                                        }
+
+                                        >a {
+                                            text-transform: capitalize;
+                                            color: #080075;
+                                            background-color: #e9eff7;
+                                            width: 100%;
+                                            padding: 12px;
+                                            border-radius: 8px;
+                                            display: flex;
+                                            justify-content: center;
+                                            align-items: center;
+                                        }
+                                    }
+                                }
+                            }
+
+                            /* 4 */
+                            &:nth-of-type(4) {
+                                grid-area: 4 / 2 / span 3 / span 1;
+                                position: relative;
+                                background:
+                                    radial-gradient(circle at 20% 75%, rgba(255, 170, 205, 0.48), transparent 50%),
+                                    radial-gradient(circle at 85% 35%, rgba(255, 190, 235, 0.42), transparent 45%),
+                                    radial-gradient(circle at 75% 70%, rgba(181, 169, 255, 0.44), transparent 50%),
+                                    radial-gradient(circle at 10% 95%, rgba(181, 200, 255, 0.38), transparent 45%),
+                                    #fff;
+
+                                >div {
+                                    >h3 {
+                                        width: 60%;
+                                    }
+
+                                    &:nth-of-type(2) {
+                                        width: 260px;
+                                        height: 420px;
+                                        position: absolute;
+                                        top: 50%;
+                                        left: 50%;
+                                        transform: translate(-50%, -50%);
+                                        border-radius: 15px;
+
+                                        >img {
+                                            width: 85px;
+                                            height: 65px;
+                                            object-fit: contain;
+                                            position: absolute;
+                                            top: 50px;
+                                            right: 30px;
+                                        }
+
+                                        >i {
+                                            font-size: 80px;
+                                            position: absolute;
+                                            bottom: 5px;
+                                            right: 5px;
+                                        }
+
+                                        &::before {
+                                            position: absolute;
+                                            width: 100%;
+                                            height: 100%;
+                                            border-radius: 15px;
+                                            top: 0;
+                                            left: 0;
+                                            content: "";
+                                            background-image: url(../Images/wave_crop.webp);
+                                            background-size: 100% 100%;
+                                            transform: rotate(180deg);
+                                            animation: credit 10s linear infinite;
+                                            background-repeat: no-repeat;
+                                        }
+                                    }
+                                }
+                            }
+
+                            /* 5 */
+                            &:nth-of-type(5) {
+                                grid-area: 4 / 3 / span 3 / span 1;
+                                background-image: url(../Images/globe.png);
+                                background-repeat: no-repeat;
+                                background-size: 100% 70%;
+                                background-position: bottom;
+                                animation: globe 20s linear infinite;
+
+                                >div {
+                                    >h3 {
+                                        width: 75%;
+                                    }
+                                }
+                            }
+
+                            /* 6 */
+                            &:nth-of-type(6) {
+                                grid-area: 7 / 1 / span 2 / span 3;
+                                background-repeat: no-repeat;
+                                background-image: url(../Images/ConnectBentoBackground.webp);
+                                background-size: cover;
+                                position: relative;
+
+                                >div {
+                                    >h3 {
+                                        width: 17%;
+                                    }
+
+                                    &:nth-of-type(2),
+                                    &:nth-of-type(3) {
+                                        border: 1px solid var(--bordercolor);
+                                        border-radius: 15px;
+                                        position: absolute;
+                                        display: flex;
+                                        flex-wrap: wrap;
+                                        align-content: start;
+                                    }
+
+                                    /* left box */
+                                    &:nth-of-type(2) {
+                                        width: 300px;
+                                        height: 330px;
+                                        background-color: white;
+                                        bottom: 20px;
+                                        left: 260px;
+                                        padding: 12px;
+                                        z-index: 2;
+
+                                        >div {
+                                            width: 100%;
+                                            display: flex;
+                                            justify-content: space-between;
+                                            font-size: 12px;
+                                            text-transform: capitalize;
+                                            border-top: 1px solid var(--bordercolor);
+                                            padding: 10px 0;
+
+                                            &:first-of-type {
+                                                border: none;
+                                                justify-content: start;
+                                                align-items: center;
+                                                margin-bottom: 15px;
+                                                column-gap: 10px;
+
+                                                >span {
+
+                                                    &:first-of-type {
+                                                        display: flex;
+                                                        align-items: center;
+                                                        justify-content: center;
+                                                        font-size: 16px;
+                                                        width: 30px;
+                                                        height: 30px;
+                                                        background-color: #ff6118;
+                                                        color: white;
+                                                        border-radius: 50%;
+                                                    }
+
+                                                    &:last-of-type {}
+                                                }
+
+                                            }
+
+                                        }
+
+                                        >span {
+                                            width: 100%;
+                                            text-transform: capitalize;
+                                            font-size: 12px;
+
+                                            &:first-of-type {
+                                                color: black;
+                                            }
+
+                                            &:last-of-type {
+                                                color: var(--textblack);
+                                                margin: 5px 0 15px;
+                                                color: rgb(80, 80, 80);
+                                            }
+                                        }
+                                    }
+
+                                    /* right box */
+                                    &:nth-of-type(3) {
+                                        width: 730px;
+                                        height: 440px;
+                                        background-color: rgba(240, 238, 238, 0.322);
+                                        backdrop-filter: blur(55px);
+                                        right: 90px;
+                                        bottom: 0;
+                                        border-radius: 15px 15px 0 0;
+                                        z-index: 1;
+                                        display: flex;
+                                        flex-wrap: wrap;
+                                        padding: 10px 20px 0;
+
+                                        >div {
+                                            display: flex;
+                                            align-items: center;
+                                            width: 100%;
+
+                                            /* url */
+                                            &:first-of-type {
+                                                margin-bottom: 10px;
+
+                                                >i {
+                                                    font-size: 30px;
+                                                    color: rgb(202, 202, 202);
+                                                    width: 30%;
+                                                }
+
+                                                >div {
+                                                    display: flex;
+                                                    border-radius: 50px;
+                                                    padding: 5px 30px;
+                                                    background-color: rgba(255, 255, 255, 0.493);
+                                                    backdrop-filter: blur(15px);
+                                                    column-gap: 5px;
+                                                    color: rgb(95, 95, 95);
+                                                    font-size: 14px;
+                                                    align-items: center;
+                                                    justify-content: center;
+                                                }
+                                            }
+
+                                            /* inner white box */
+                                            &:last-of-type {
+                                                width: 100%;
+                                                height: 100%;
+                                                background-color: white;
+                                                border-radius: 8px 8px 0 0;
+
+                                                >div {
+                                                    display: flex;
+                                                    flex-wrap: wrap;
+                                                    align-content: start;
+
+                                                    /* left */
+                                                    &:first-of-type {
+                                                        border-right: 1px solid var(--bordercolor);
+                                                        width: 26%;
+                                                        height: 100%;
+                                                        padding: 10px 25px;
+
+                                                        >span {
+                                                            text-transform: capitalize;
+
+                                                            i {
+                                                                font-size: 19px;
+                                                                background-color: #fdd4e8;
+                                                                color: #d5205e;
+                                                                border-radius: 50%;
+                                                                padding: 3px;
+                                                            }
+                                                        }
+                                                    }
+
+                                                    /* right */
+                                                    &:last-of-type {
+                                                        height: 100%;
+                                                        width: 100%;
+
+                                                        >* {
+                                                            width: 100%;
+                                                            text-transform: capitalize;
+                                                        }
+
+                                                        >p {
+                                                            font-size: 13px;
+                                                            font-weight: bold;
+                                                            padding: 20px 20px 20px;
+                                                        }
+
+                                                        >div {
+                                                            display: flex;
+                                                            border-bottom: 1px solid var(--bordercolor);
+                                                            padding: 9px 20px;
+
+                                                            >span {
+                                                                font-size: 10px;
+                                                                width: 25%;
+                                                                display: flex;
+                                                                align-items: center;
+
+                                                                >* {
+                                                                    border-radius: 50%;
+                                                                    margin-right: 10px;
+                                                                    padding: 3px;
+                                                                    display: flex;
+                                                                    justify-content: center;
+                                                                    align-items: center;
+                                                                }
+
+                                                                >i {}
+
+                                                                >span {
+                                                                    color: white;
+                                                                    width: 15px;
+                                                                    height: 15px;
+                                                                }
+                                                            }
+
+                                                            &:first-of-type {
+                                                                >span {
+                                                                    font-weight: bold;
+                                                                }
+                                                            }
+
+                                                            &:nth-of-type(2) {
+                                                                >span {
+                                                                    >i {
+                                                                        background-color: #faeed2;
+                                                                    }
+                                                                }
+                                                            }
+
+                                                            &:nth-of-type(3) {
+                                                                >span {
+                                                                    >i {
+                                                                        background-color: #8278fe;
+                                                                        color: white;
+                                                                    }
+                                                                }
+                                                            }
+
+                                                            &:nth-of-type(4) {
+                                                                >span {
+                                                                    >span {
+                                                                        background-color: #faaf00;
+                                                                    }
+                                                                }
+                                                            }
+
+                                                            &:nth-of-type(5) {
+                                                                >span {
+                                                                    >span {
+                                                                        background-color: #ff6118;
+                                                                    }
+                                                                }
+                                                            }
+
+                                                            &:nth-of-type(6) {
+                                                                >span {
+                                                                    >span {
+                                                                        background-color: #eea49e;
+                                                                    }
+                                                                }
+                                                            }
+
+                                                            &:nth-of-type(7) {
+                                                                >span {
+                                                                    >span {
+                                                                        background-color: #7f7dfc;
+                                                                    }
+                                                                }
+                                                            }
+
+                                                            &:nth-of-type(8) {
+                                                                >span {
+                                                                    >i {
+                                                                        background-color: black;
+                                                                        color: white;
+                                                                    }
+                                                                }
+                                                            }
+
+                                                            &:nth-of-type(9) {
+                                                                >span {
+                                                                    >i {
+                                                                        background-color: ghostwhite;
+                                                                        color: orange;
+                                                                    }
+                                                                }
+                                                            }
+
+                                                            &:nth-of-type(10) {
+                                                                >span {
+                                                                    >span {
+                                                                        background-color: #ff6017;
+                                                                    }
+                                                                }
+                                                            }
+
+
+
+                                                            &:last-of-type {
+                                                                border: none;
+
+                                                                >span {
+                                                                    >span {
+                                                                        background-color: #fab000;
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+
+
+                                }
+
+
+                            }
+
+                            &:hover {
+
+                                border: 1px solid #b9b9b9;
+                                transform: scale(1.01);
+
+
+                                >div {
+                                    &:first-of-type {
+                                        >i {
+                                            background-color: blue;
+                                            color: white;
+                                            font-size: 17px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
     }
 }
