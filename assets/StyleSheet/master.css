@@ -1,8 +1,10 @@
 :root {
     --bordercolor: #e5edf5;
     --textblack: #061b31;
-    /* --:; */
-    /* --:; */
+    --graybg: #fafbfd;
+    --textlight: #64748d;
+    --buttoncolor: #533afd;
+    --buttonhover: #2e2b8c;
     /* --:; */
 }
 
@@ -150,6 +152,18 @@ section {
     }
 }
 
+@keyframes carrossel {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
+
+
+}
 
 
 
@@ -799,8 +813,14 @@ main {
     display: flex;
     flex-wrap: wrap;
     align-content: start;
+    justify-content: center;
+    overflow: hidden;
 
     >section {
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        align-content: start;
 
         /*==================#2-1 FLEXIBLE SOLUTION STYLE ==================*/
         &:first-of-type {
@@ -809,13 +829,10 @@ main {
             border: none;
             border-top: 1px solid var(--bordercolor);
             border-bottom: 1px solid var(--bordercolor);
-            display: flex;
-            justify-content: center;
-            align-items: start;
 
             /* inner box */
             >div {
-                padding: 100px 20px 40px;
+                padding: 100px 20px 0px;
                 width: 100%;
                 max-width: 1265px;
                 border-right: 1px solid var(--bordercolor);
@@ -823,13 +840,13 @@ main {
                 display: flex;
                 flex-wrap: wrap;
                 align-content: start;
+                row-gap: 70px;
 
                 >div {
 
-                    /* title */
+                    /* top title */
                     &:first-of-type {
                         width: 100%;
-                        margin-bottom: 70px;
 
                         >h2 {
                             width: 80%;
@@ -2147,6 +2164,1197 @@ main {
                         }
 
                     }
+
+                    /* following */
+                    &:nth-of-type(3) {
+                        width: 100%;
+                        margin-top: 50px;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: 50px 40px;
+                        position: relative;
+                        background-image: url(../Images/Not\ sure\ background.png);
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        background-position: right;
+
+                        >h3 {
+                            font-size: 26px;
+                            color: var(--textblack);
+                            width: 55%;
+                            font-weight: normal;
+
+                            span {
+                                color: #64748d;
+                            }
+                        }
+
+                        >a {
+                            background-color: #533afd;
+                            color: white;
+                            transition: 0.4s;
+                            border-radius: 5px;
+                            text-transform: capitalize;
+                            padding: 15px 25px;
+
+                            &:hover {
+                                background-color: #4032c8;
+                            }
+                        }
+
+                        &::after {
+                            content: "";
+                            width: 200%;
+                            height: 1px;
+                            background-color: var(--bordercolor);
+                            position: absolute;
+                            top: 0;
+                            left: -50%;
+                        }
+
+                        &::before {
+                            content: "";
+                            width: 200%;
+                            height: 1px;
+                            background-color: var(--bordercolor);
+                            position: absolute;
+                            top: 100%;
+                            left: -50%;
+                        }
+                    }
+                }
+            }
+        }
+
+        /*==================#2-2 BUILDING  STYLE ==================*/
+        &:nth-of-type(2) {
+            padding: 70px 20px;
+            position: relative;
+
+            >img {
+                width: 100%;
+                height: 400px;
+                object-fit: cover;
+                object-position: center 60%;
+                border-radius: 15px;
+            }
+
+            >h3 {
+                font-weight: normal;
+                width: 50%;
+                position: absolute;
+                font-size: 48px;
+                color: white;
+                text-transform: capitalize;
+                top: 100px;
+                left: 50px;
+            }
+
+            >a {
+                position: absolute;
+                color: #0800ff;
+                background-color: white;
+                border-radius: 8px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 15px 25px;
+                top: 240px;
+                left: 50px;
+            }
+        }
+
+        /*==================#2-3 THE BACKBONE STYLE ==================*/
+        &:nth-of-type(3) {
+            width: 100%;
+            max-width: 100%;
+            background-color: #fafbfd;
+
+            >div {
+                width: 100%;
+                height: 100%;
+                max-width: 1265px;
+                border-right: 1px solid var(--bordercolor);
+                border-left: 1px solid var(--bordercolor);
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-self: center;
+
+                >h2 {
+                    text-align: center;
+                    font-size: 56px;
+                    width: 466px;
+                    color: var(--textblack);
+                    padding: 90px 0;
+                }
+
+                >div {
+                    display: flex;
+                    width: 100%;
+
+                    /* numbers */
+                    &:first-of-type {
+
+                        >div {
+                            width: 25%;
+                            border-top: 1px solid var(--bordercolor);
+                            border-bottom: 1px solid var(--bordercolor);
+                            display: flex;
+                            align-content: start;
+                            justify-content: center;
+                            flex-wrap: wrap;
+                            row-gap: 10px;
+                            padding: 50px 0;
+                            transition: 0.4s;
+
+                            >span {
+                                width: 100%;
+                                text-align: center;
+                                color: gray;
+
+                                &:first-of-type {
+                                    font-size: 48px;
+                                }
+
+                                &:last-of-type {
+                                    width: 60%;
+                                }
+                            }
+
+                            &:first-of-type {
+                                >span {
+                                    color: var(--textblack);
+                                }
+                            }
+
+                            &:hover {
+
+                                &:first-of-type {
+                                    border-top: 1px solid #0b0b0b;
+                                    border-bottom: 1px solid #0b0b0b;
+
+                                    >span {
+                                        color: var(--textblack);
+                                    }
+                                }
+
+                                border-top: 1px solid #5b6392;
+                                border-bottom: 1px solid #5b6392;
+
+                                >span {
+                                    color: #5b6392;
+                                }
+                            }
+                        }
+                    }
+
+                    /* dots */
+                    &:nth-of-type(2) {
+                        height: 520px;
+                        /* background: #1876c8;
+                        background: radial-gradient(circle farthest-corner at bottom center, #1876c8 0%, #f8fafd 80%); */
+                        position: relative;
+
+                        >img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+
+                        >i {
+                            position: absolute;
+                            top: 30px;
+                            right: 30px;
+                            color: #0800ff;
+                            border-radius: 3px;
+                            border: 1px solid var(--textblack);
+                            padding: 5px;
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+
+        /*==================#2-4 POWERING STYLE ==================*/
+        &:nth-of-type(4) {
+            flex-wrap: wrap;
+            justify-content: start;
+
+            >div {
+                display: flex;
+                flex-wrap: wrap;
+                align-content: start;
+                width: 100%;
+
+                /* heading */
+                &:first-of-type {
+                    border-bottom: 1px solid var(--bordercolor);
+
+                    >h2 {
+                        width: 860px;
+                        font-size: 32px;
+                        color: var(--textblack);
+                        font-weight: normal;
+                        padding: 100px 20px 60px;
+
+                        >span {
+                            color: var(--textlight);
+                        }
+                    }
+                }
+
+                /* transform */
+                &:nth-of-type(2) {
+                    justify-content: space-between;
+                    padding: 60px 20px 40px;
+
+                    >p {
+                        width: 400px;
+                        font-size: 26px;
+                        color: var(--textblack);
+                    }
+
+                    >span {
+                        width: 500px;
+                        font-size: 18px;
+                        color: var(--textlight);
+                    }
+
+                    >div {
+                        width: 100%;
+                        display: flex;
+                        margin-top: 20px;
+
+                        >a {
+                            color: white;
+                            background-color: #533afd;
+                            border-radius: 5px;
+                            padding: 15px 25px;
+                            transition: 0.4s;
+
+                            &:hover {
+                                background-color: #4032c8;
+                            }
+                        }
+                    }
+                }
+
+                /* hertz */
+                &:nth-of-type(3) {
+
+
+
+                    >figure {
+                        width: 100%;
+                        height: 530px;
+                        margin: 15px 0 25px;
+                        padding: 0 20px;
+
+                        >img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            border-radius: 5px;
+                        }
+                    }
+
+                    >div {
+                        width: 100%;
+                        display: flex;
+                        align-items: center;
+                        padding: 0 20px;
+
+                        /* above img */
+                        &:first-of-type {
+                            justify-content: space-between;
+
+                            >span {
+                                font-size: 22px;
+                                color: var(--textblack);
+                            }
+
+                            >a {
+                                color: var(--buttoncolor);
+                                border: 1px solid var(--bordercolor);
+                                border-radius: 5px;
+                                transition: 0.4s;
+                                padding: 10px 20px;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                column-gap: 5px;
+
+                                &:hover {
+                                    border: 1px solid var(--textblack);
+                                    color: var(--textblack);
+                                }
+                            }
+
+                        }
+
+                        /* under img */
+                        &:nth-of-type(2) {
+                            justify-content: space-between;
+                            margin-bottom: 50px;
+
+
+                            >p {
+                                color: var(--textlight);
+
+                                >span {
+                                    font-size: 17px;
+                                    color: var(--textblack);
+                                }
+                            }
+                        }
+
+                        /* links */
+                        &:nth-of-type(3) {
+                            font-size: 22px;
+                            flex-wrap: wrap;
+                            align-content: start;
+
+                            >a {
+                                width: 100%;
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                padding: 20px 0;
+                                transition: 0.4s;
+                                color: var(--textblack);
+
+                                >span {
+                                    display: flex;
+                                    align-items: center;
+
+                                    >i {
+                                        margin-right: 25px;
+                                        font-size: 40px;
+                                    }
+                                }
+
+                                >i {
+                                    color: var(--buttoncolor);
+                                    padding: 7px;
+                                    border-radius: 3px;
+                                    background-color: #e2e4ff;
+                                    transition: 0.4s;
+                                }
+
+                                &:nth-of-type(2) {
+                                    border-top: 2px dashed var(--bordercolor);
+                                    border-bottom: 2px dashed var(--bordercolor);
+                                }
+
+                                &:hover {
+                                    color: var(--buttoncolor);
+
+                                    >i {
+                                        background-color: var(--buttoncolor);
+                                        color: white;
+                                    }
+                                }
+                            }
+                        }
+
+                        /* Realize value */
+                        &:nth-of-type(4) {
+                            flex-wrap: wrap;
+                            padding: 90px 20px;
+                            margin-bottom: 90px;
+                            row-gap: 40px;
+                            border-bottom: 1px solid var(--bordercolor);
+
+                            >h5 {
+                                font-size: 26px;
+                                color: var(--textblack);
+                                width: 100%;
+                            }
+
+                            >div {
+                                width: 33.3333%;
+                                display: flex;
+                                flex-wrap: wrap;
+                                align-content: start;
+                                row-gap: 25px;
+
+                                >i {
+                                    color: var(--buttoncolor);
+                                    padding: 5px;
+                                    border-radius: 3px;
+                                    border: 1px solid var(--bordercolor);
+                                    font-size: 20px;
+                                }
+
+                                >p {
+                                    width: 100%;
+                                    color: var(--textlight);
+                                    text-wrap: balance;
+
+                                    >span {
+                                        font-size: 17px;
+                                        color: var(--textblack);
+                                    }
+                                }
+
+                                >a {
+                                    width: 100%;
+                                    font-size: 15px;
+                                    transition: 0.4s;
+                                    color: var(--buttoncolor);
+
+                                    &:hover {
+                                        color: var(--buttonhover);
+                                    }
+                                }
+                            }
+
+                        }
+
+                        /* Build a foundation */
+                        &:nth-of-type(5) {
+                            flex-wrap: wrap;
+                            justify-content: space-between;
+                            row-gap: 30px;
+                            margin-bottom: 35px;
+
+                            >h4 {
+                                width: 430px;
+                                font-size: 26px;
+                                color: var(--textblack);
+                                font-weight: normal;
+                            }
+
+                            >span {
+                                width: 467px;
+                                font-size: 18px;
+                                color: var(--textlight);
+                            }
+
+                            >div {
+                                width: 100%;
+
+                                &:first-of-type {
+                                    text-align-last: left;
+
+                                    >a {
+                                        width: fit-content;
+                                        font-size: 15px;
+                                        background-color: #533afd;
+                                        transition: 0.4s;
+                                        color: white;
+                                        display: flex;
+                                        justify-content: center;
+                                        align-items: center;
+                                        border-radius: 3px;
+                                        padding: 15px 25px;
+                                        column-gap: 5px;
+
+                                        >i {
+                                            font-size: 14px;
+                                        }
+
+
+                                        &:hover {
+                                            background-color: #4032c8;
+                                        }
+                                    }
+                                }
+
+                                &:last-of-type {
+                                    text-align: right;
+
+                                    >a {
+                                        font-size: 20px;
+                                        border: 1px solid var(--bordercolor);
+                                        padding: 10px;
+                                        border-radius: 5px;
+
+                                        &:first-of-type {
+                                            color: var(--textlight);
+                                        }
+
+                                        &:last-of-type {
+                                            background-color: #e8e9ff;
+                                            color: var(--buttoncolor);
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        /* carrossel */
+                        &:nth-of-type(6) {
+                            padding: 0 0 80px 20px;
+                            overflow: hidden;
+
+                            /* moving box */
+                            >div {
+                                width: 100%;
+                                display: flex;
+                                column-gap: 20px;
+                                animation: carrossel 20s linear infinite;
+
+                                >a {
+                                    width: 330px;
+                                    height: 545px;
+                                    display: flex;
+                                    flex-wrap: wrap;
+                                    align-content: start;
+                                    row-gap: 15px;
+                                    position: relative;
+                                    transition: 0.8s;
+
+                                    >img {
+                                        width: 330px;
+                                        height: 450px;
+                                        object-fit: cover;
+                                        border-radius: 8px;
+                                    }
+
+                                    >span {
+
+                                        &:first-of-type {
+                                            width: 100%;
+                                            color: var(--textblack);
+                                        }
+
+                                        &:nth-of-type(2) {
+                                            color: var(--buttoncolor);
+                                            transition: 0.4s;
+
+                                            &:hover {
+                                                color: var(--buttonhover);
+                                            }
+                                        }
+
+                                        &:nth-of-type(3) {
+                                            position: absolute;
+                                            bottom: 110px;
+                                            left: 20px;
+                                            font-size: 20px;
+                                            color: white;
+                                            font-weight: bold;
+                                            font-family: cursive;
+                                        }
+                                    }
+
+                                    &:hover {
+                                        transform: scale(1.05);
+                                    }
+
+                                }
+
+                                &:hover {
+                                    animation-play-state: paused;
+                                }
+                            }
+                        }
+
+                        /* twins */
+                        &:nth-of-type(7) {
+                            justify-content: space-between;
+                            padding-bottom: 80px;
+                            border-bottom: 1px solid var(--bordercolor);
+
+                            >div {
+                                width: 49%;
+                                display: flex;
+                                flex-wrap: wrap;
+                                align-content: start;
+                                row-gap: 25px;
+                                padding: 35px 23px;
+                                border: 1px solid var(--bordercolor);
+                                border-radius: 8px;
+                                background-repeat: no-repeat;
+                                background-position: right;
+                                background-color: #f8fafd;
+                                transition: 0.4s;
+
+                                &:first-of-type {
+                                    background-image: url(../Images/card_startups.webp);
+                                    background-size: 70% 150%;
+                                    background-position: 130%;
+                                }
+
+                                &:last-of-type {
+                                    background-image: url(../Images/background.png);
+                                }
+
+                                >p {
+                                    width: 60%;
+                                    color: var(--textlight);
+
+                                    >span {
+                                        color: var(--textblack);
+                                        font-size: 17px;
+                                    }
+                                }
+
+                                >a {
+                                    color: var(--buttoncolor);
+                                    display: flex;
+                                    align-items: center;
+                                    column-gap: 5px;
+                                    transition: 0.4s;
+                                    width: 100%;
+
+                                }
+
+                                &:hover {
+                                    border: 1px solid var(--buttonhover);
+
+                                    >a {
+                                        color: var(--buttonhover);
+                                    }
+                                }
+                            }
+                        }
+
+                        /* make your */
+                        &:nth-of-type(8) {
+                            padding-top: 80px;
+                            flex-wrap: wrap;
+                            justify-content: space-between;
+                            row-gap: 30px;
+                            margin-bottom: 100px;
+
+                            >h4 {
+                                width: 430px;
+                                font-size: 26px;
+                                color: var(--textblack);
+                                font-weight: normal;
+                            }
+
+                            >span {
+                                width: 467px;
+                                font-size: 18px;
+                                color: var(--textlight);
+                            }
+
+                            >div {
+                                width: 100%;
+
+
+
+                                >a {
+                                    width: fit-content;
+                                    font-size: 15px;
+                                    background-color: #533afd;
+                                    transition: 0.4s;
+                                    color: white;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    border-radius: 3px;
+                                    padding: 15px 25px;
+                                    column-gap: 5px;
+
+                                    >i {
+                                        font-size: 14px;
+                                    }
+
+
+                                    &:hover {
+                                        background-color: #4032c8;
+                                    }
+
+                                }
+                            }
+                        }
+
+                        /* big bix */
+                        &:nth-of-type(9) {
+
+                            >div {
+                                width: 100%;
+                                height: 530px;
+                                background-image: url(../Images/platform-graphic-background_2x.webp);
+                                background-repeat: no-repeat;
+                                background-size: cover;
+                                position: relative;
+                                overflow: hidden;
+
+                                /* glass box */
+                                >div {
+                                    width: 800px;
+                                    height: 480px;
+                                    background-color: rgba(240, 238, 238, 0.322);
+                                    backdrop-filter: blur(55px);
+                                    border-radius: 8px 8px 0 0;
+                                    display: flex;
+                                    flex-wrap: wrap;
+                                    padding: 10px 10px;
+                                    position: absolute;
+                                    bottom: 0;
+                                    left: 50%;
+                                    transform: translateX(-50%);
+
+                                    >div {
+                                        display: flex;
+                                        flex-wrap: wrap;
+                                        align-content: start;
+
+                                        /* url */
+                                        &:first-of-type {
+                                            margin-bottom: 10px;
+                                            width: 100%;
+
+                                            >i {
+                                                font-size: 30px;
+                                                color: rgb(224, 223, 223);
+                                                width: 35%;
+                                            }
+
+                                            >div {
+                                                display: flex;
+                                                border-radius: 50px;
+                                                padding: 5px 60px;
+                                                background-color: rgba(255, 255, 255, 0.493);
+                                                backdrop-filter: blur(15px);
+                                                column-gap: 5px;
+                                                color: rgb(95, 95, 95);
+                                                font-size: 12px;
+                                                align-items: center;
+                                                justify-content: center;
+                                            }
+                                        }
+
+                                        /* purple */
+                                        &:nth-of-type(2) {
+                                            height: 430px;
+                                            width: 130px;
+                                            background-color: #5d0252;
+                                            border-radius: 5px 0 0 0;
+                                            color: white;
+                                            row-gap: 20px;
+                                            padding: 20px 10px;
+
+                                            >span {
+                                                width: 100%;
+                                                font-size: 12px;
+
+                                                >i {
+                                                    border-radius: 50%;
+                                                    padding: 5px;
+                                                    background-color: #fed5e9;
+                                                    color: #ad2f90;
+                                                    margin-right: 10px;
+                                                }
+                                            }
+
+                                            >ul {
+                                                text-transform: capitalize;
+                                                display: flex;
+                                                flex-wrap: wrap;
+                                                align-content: start;
+                                                row-gap: 10px;
+                                                font-size: 11px;
+
+                                                >li {
+                                                    width: 100%;
+
+                                                    &:nth-of-type(2) {
+                                                        color: #ed46c7;
+                                                    }
+                                                }
+
+                                            }
+                                        }
+
+                                        /* white */
+                                        &:nth-of-type(3) {
+                                            height: 430px;
+                                            width: 640px;
+                                            background-color: white;
+                                            padding: 30px 20px;
+                                            justify-content: space-between;
+                                            row-gap: 10px;
+                                            position: relative;
+
+                                            >span {
+                                                width: 100%;
+                                                margin-bottom: 30px;
+                                                color: #aa298b;
+                                                font-size: 12px;
+                                                text-transform: capitalize;
+                                                font-weight: bold;
+
+                                            }
+
+                                            >div {
+                                                border: 2px dashed #ffd4ee;
+                                                background-color: #fffafd;
+                                                padding: 15px 10px;
+                                                display: flex;
+                                                flex-wrap: wrap;
+                                                align-content: start;
+                                                font-size: 11px;
+
+                                                /* 1 */
+                                                &:first-of-type {
+                                                    width: 100%;
+                                                    justify-content: space-between;
+                                                    align-items: center;
+
+                                                    >div {
+                                                        width: 385px;
+                                                        display: flex;
+                                                        flex-wrap: wrap;
+                                                        align-content: space-between;
+
+                                                        >span {
+                                                            font-size: 10px;
+
+                                                            &:first-of-type {
+                                                                >i {
+                                                                    color: #aa298b;
+                                                                    margin-right: 3px;
+                                                                }
+                                                            }
+
+                                                            &:last-of-type {
+                                                                width: 100%;
+                                                                margin-top: 5px;
+                                                            }
+                                                        }
+                                                    }
+
+                                                    /* copy */
+                                                    >span {
+                                                        background-color: #ffe0ef;
+                                                        color: #aa298b;
+                                                        width: 180px;
+                                                        height: 25px;
+                                                        display: flex;
+                                                        justify-content: center;
+                                                        align-items: center;
+                                                        border-radius: 4px;
+                                                    }
+
+                                                }
+
+                                                /* 2 */
+                                                &:nth-of-type(2) {
+                                                    width: 195px;
+                                                    row-gap: 7px;
+
+                                                    >* {
+                                                        width: 100%;
+                                                    }
+
+                                                    >span {
+
+                                                        &:first-of-type {}
+
+                                                        &:nth-of-type(2) {
+                                                            font-size: 16px;
+                                                            font-weight: bold;
+                                                        }
+
+                                                        /* copy */
+                                                        &:last-of-type {
+                                                            background-color: #ffe0ef;
+                                                            color: #aa298b;
+                                                            width: 100%;
+                                                            height: 25px;
+                                                            display: flex;
+                                                            justify-content: center;
+                                                            align-items: center;
+                                                            border-radius: 4px;
+                                                        }
+                                                    }
+
+                                                    >div {
+                                                        display: flex;
+                                                        justify-content: space-between;
+                                                        align-items: center;
+
+                                                        >span {
+
+                                                            &:first-of-type {}
+
+                                                            &:last-of-type {
+                                                                color: #aa298b;
+                                                            }
+                                                        }
+                                                    }
+                                                }
+
+                                                /* 3 */
+                                                &:nth-of-type(3) {
+                                                    width: 395px;
+                                                    row-gap: 7px;
+
+                                                    >span {
+                                                        width: 100%;
+
+                                                        &:nth-of-type(2) {
+                                                            font-weight: bold;
+                                                        }
+
+                                                        &:last-of-type {
+                                                            background-color: #ffe0ef;
+                                                            color: #aa298b;
+                                                            width: 180px;
+                                                            height: 25px;
+                                                            display: flex;
+                                                            justify-content: center;
+                                                            align-items: center;
+                                                            border-radius: 4px;
+                                                            margin-top: 6px;
+                                                        }
+                                                    }
+                                                }
+
+                                                /* 4 */
+                                                &:nth-of-type(4) {
+                                                    width: 100%;
+
+                                                    >* {
+                                                        width: 100%;
+                                                    }
+
+                                                    >span {
+                                                        text-transform: capitalize;
+                                                        margin-bottom: 15px;
+                                                    }
+
+                                                    >div {
+                                                        display: flex;
+                                                        flex-wrap: wrap;
+                                                        border-bottom: 1px solid #ffe0ef;
+                                                        padding: 6px 0;
+                                                        font-size: 10px;
+
+                                                        >span {
+                                                            width: 25%;
+                                                            text-transform: capitalize;
+                                                        }
+
+                                                        &:first-of-type {
+                                                            >span {
+                                                                color: var(--textlight);
+                                                            }
+                                                        }
+
+                                                        &:nth-of-type(2),
+                                                        &:nth-of-type(4) {
+
+                                                            >span {
+                                                                &:nth-of-type(2) {
+                                                                    color: green;
+                                                                }
+                                                            }
+
+                                                        }
+
+                                                        &:nth-of-type(3) {
+                                                            >span {
+                                                                &:nth-of-type(2) {
+                                                                    color: rgb(168, 7, 7);
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+
+                                                &:nth-of-type(5),
+                                                &:nth-of-type(6),
+                                                &:nth-of-type(7),
+                                                &:nth-of-type(8) {
+                                                    position: absolute;
+                                                    border: none;
+                                                    background-color: white;
+                                                    border-radius: 5px;
+                                                    width: 350px;
+                                                    height: 90px;
+                                                    padding: 0px;
+                                                    align-content: space-between;
+
+                                                    >* {
+                                                        width: 100%;
+                                                    }
+
+                                                    >span {
+
+                                                        &:first-of-type {
+                                                            font-size: 12px;
+                                                            color: var(--textblack);
+                                                            text-transform: capitalize;
+                                                            padding: 10px 10px;
+                                                        }
+
+                                                        &:nth-of-type(2) {
+                                                            font-size: 10px;
+                                                            padding: 0 10px;
+                                                            color: var(--textlight);
+                                                            margin-bottom: 10px;
+
+                                                        }
+                                                    }
+
+                                                    >p {
+
+                                                        border-radius: 5px;
+                                                        color: var(--textblack);
+                                                        font-size: 10px;
+                                                        font-family: monospace;
+                                                        border-top: 1px solid var(--bordercolor);
+                                                        background-color: #f8fafd;
+                                                        padding: 10px;
+
+                                                        p {
+                                                            span {
+                                                                &:first-of-type {
+                                                                    color: #5c73ff;
+                                                                }
+
+                                                                &:last-of-type {
+                                                                    color: #0bbd9a;
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+
+
+                                                }
+
+                                                &:nth-of-type(5) {
+                                                    top: 146px;
+                                                    left: -315px;
+                                                }
+
+                                                &:nth-of-type(6) {
+                                                    top: 318px;
+                                                    left: -306px;
+                                                }
+
+                                                &:nth-of-type(7) {
+                                                    top: -62px;
+                                                    left: 454px;
+                                                }
+
+                                                &:nth-of-type(8) {
+                                                    top: 240px;
+                                                    left: 492px;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        /* under big box */
+                        &:nth-of-type(10) {
+                            flex-wrap: wrap;
+                            padding: 40px 20px;
+                            margin-bottom: 90px;
+                            row-gap: 40px;
+
+
+                            >div {
+                                width: 33.3333%;
+                                display: flex;
+                                flex-wrap: wrap;
+                                align-content: start;
+                                row-gap: 25px;
+
+                                >i {
+                                    color: var(--buttoncolor);
+                                    padding: 5px;
+                                    border-radius: 3px;
+                                    border: 1px solid var(--bordercolor);
+                                    font-size: 20px;
+                                }
+
+                                >p {
+                                    width: 100%;
+                                    color: var(--textlight);
+                                    text-wrap: balance;
+
+                                    >span {
+                                        font-size: 17px;
+                                        color: var(--textblack);
+                                    }
+                                }
+
+                                >a {
+                                    width: 100%;
+                                    font-size: 15px;
+                                    transition: 0.4s;
+                                    color: var(--buttoncolor);
+
+                                    &:hover {
+                                        color: var(--buttonhover);
+                                    }
+                                }
+                            }
+                        }
+
+                        /* man */
+                        &:nth-of-type(11) {
+                            flex-wrap: wrap;
+                            row-gap: 35px;
+                            justify-content: center;
+                            margin-bottom: 100px;
+
+                            >img {
+                                width: 50px;
+                                height: 50px;
+                                object-fit: cover;
+                            }
+
+                            >div {
+                                display: flex;
+                                justify-content: center;
+                                text-align: center;
+                                width: 100%;
+                                font-size: 26px;
+
+                                >span {
+                                    width: 70%;
+                                    color: var(--textlight);
+                                }
+                            }
+
+                            >p {
+                                width: 100%;
+                                color: var(--textlight);
+                                font-size: 18px;
+                                text-align: center;
+
+                                >span {
+                                    color: var(--textblack);
+                                }
+                            }
+
+                            >a {
+                                color: var(--buttoncolor);
+                                text-align: center;
+                                width: 100%;
+                                transition: 0.4s;
+
+
+                                &:hover {
+                                    color: var(--buttonhover);
+                                }
+                            }
+
+
+
+                        }
+
+
+
+
+                    }
+
+
                 }
             }
         }
