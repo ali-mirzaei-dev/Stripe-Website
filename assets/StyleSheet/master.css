@@ -7,10 +7,7 @@
     --buttonhover: #2e2b8c;
     --bordercolor2: #182659;
     --textlight2: #839bc8;
-    /* --:; */
 }
-
-body {}
 
 section {
     border-right: 1px solid var(--bordercolor);
@@ -34,6 +31,7 @@ section {
 }
 
 @keyframes marquee {
+
     from {
         transform: translateX(0);
     }
@@ -44,16 +42,17 @@ section {
 }
 
 @keyframes circle {
+
     50% {
         background-size: 180% 80%;
     }
 }
 
 @keyframes globe {
+
     50% {
         background-size: 110% 70%;
     }
-
 }
 
 @keyframes mobile1 {
@@ -91,7 +90,6 @@ section {
         transform: translateY(35px);
     }
 
-    /* Move into place */
     50% {
         opacity: 1;
         transform: translateY(0);
@@ -161,10 +159,8 @@ section {
     }
 
     to {
-        transform: translateX(-50%);
+        transform: translateX(-2780px);
     }
-
-
 }
 
 @keyframes swaper {
@@ -256,7 +252,7 @@ section {
     }
 
     50% {
-        background-size: 100% 60%;
+        background-size: 100% 90%;
     }
 
 
@@ -282,7 +278,21 @@ section {
     }
 }
 
+@keyframes bshadow {
 
+    0%,
+    100% {
+        box-shadow:
+            0 0 30px 5px rgba(66, 46, 182, .35),
+            0 0 90px 10px rgba(108, 77, 220, .25);
+    }
+
+    50% {
+        box-shadow:
+            0 0 45px 12px rgba(66, 46, 182, .55),
+            0 0 130px 25px rgba(108, 77, 220, .40);
+    }
+}
 
 
 /*==================#1 HEADER STYLE ==================*/
@@ -366,8 +376,6 @@ header {
                         >ul {
                             display: flex;
 
-
-
                             >li {
                                 display: flex;
                                 height: 100%;
@@ -394,7 +402,6 @@ header {
                                         transition: 0.4s;
                                     }
                                 }
-
 
                                 /* drop downs */
                                 >div {
@@ -480,7 +487,6 @@ header {
                                                     pointer-events: none;
                                                 }
                                             }
-
                                         }
 
                                         &:nth-of-type(4) {
@@ -541,9 +547,6 @@ header {
                                             }
                                         }
                                     }
-
-
-
                                 }
 
                                 &:nth-of-type(3) {
@@ -575,8 +578,6 @@ header {
                                         }
                                     }
                                 }
-
-
 
                                 &:hover {
                                     >a {
@@ -636,7 +637,6 @@ header {
                                 &:has(~li:hover)>a {
                                     color: gray;
                                 }
-
                             }
                         }
                     }
@@ -665,7 +665,6 @@ header {
                         &:first-of-type {
                             color: rgb(233, 155, 10);
                             background-color: white;
-
                         }
 
                         &:last-of-type {
@@ -687,12 +686,9 @@ header {
                 z-index: 2;
             }
 
-
-
             &:hover {
                 background-color: white;
                 box-shadow: 0 0 50px 5px rgba(128, 128, 128, 0.342);
-
 
                 >div {
                     &:first-of-type {
@@ -712,10 +708,7 @@ header {
                             }
                         }
                     }
-
                 }
-
-
             }
         }
 
@@ -772,7 +765,6 @@ header {
 
                         &:last-of-type {
                             color: #0800ff;
-
                         }
 
                         &:hover {
@@ -786,7 +778,6 @@ header {
                                 color: #080075;
                             }
                         }
-
                     }
                 }
 
@@ -817,14 +808,11 @@ header {
                                 margin-right: 5px;
                             }
 
-
                             &:first-of-type,
                             &:nth-of-type(15) {
                                 font-size: 60px;
                                 color: #013579;
                             }
-
-                            &:nth-of-type(2) {}
 
                             &:nth-of-type(3),
                             &:nth-of-type(17) {
@@ -866,13 +854,10 @@ header {
                                 }
                             }
 
-
                             &:nth-of-type(8),
                             &:nth-of-type(22) {
                                 color: purple;
                             }
-
-
 
                             &:nth-of-type(12),
                             &:nth-of-type(26) {
@@ -1058,8 +1043,6 @@ main {
                                             top: 34px;
                                             left: 54px;
 
-
-
                                             >i {
                                                 font-size: 30px;
                                                 margin-bottom: 20px;
@@ -1095,8 +1078,6 @@ main {
                                                     border-radius: 8px;
                                                     color: #ff7434;
                                                 }
-
-
                                             }
 
                                             >div {
@@ -1110,13 +1091,10 @@ main {
                                                     text-transform: capitalize;
                                                     font-size: 14px;
                                                 }
-
-                                                &:first-of-type {}
                                             }
 
                                             &:first-of-type {
                                                 animation: mobile1 10s ease-in-out infinite;
-
                                             }
 
                                             &:last-of-type {
@@ -1134,7 +1112,6 @@ main {
                                                     }
                                                 }
                                             }
-
                                         }
                                     }
 
@@ -1219,7 +1196,6 @@ main {
 
                                                             &:first-of-type {
                                                                 font-size: 14px;
-
                                                             }
 
                                                             &:nth-of-type(2) {
@@ -1275,6 +1251,7 @@ main {
                                                                 }
 
                                                                 &:nth-of-type(1) {
+
                                                                     >i {
                                                                         color: blue;
                                                                     }
@@ -1307,7 +1284,6 @@ main {
                                                                 background-color: #00d66f;
                                                                 color: black;
                                                                 margin-right: 8px;
-
 
                                                                 >i {
                                                                     border-radius: 50%;
@@ -1372,8 +1348,6 @@ main {
                                                                     color: var(--textblack);
                                                                 }
                                                             }
-
-
                                                         }
 
                                                         >div {
@@ -1389,11 +1363,8 @@ main {
                                                                 border-top: 1px solid var(--bordercolor);
                                                                 padding-top: 20px;
                                                             }
-
                                                         }
                                                     }
-
-
                                                 }
                                             }
                                         }
@@ -1432,7 +1403,6 @@ main {
                                             }
                                         }
                                     }
-
                                 }
                             }
 
@@ -1717,7 +1687,6 @@ main {
                                                     left: 310px;
                                                     height: 60px;
                                                 }
-
                                             }
                                         }
                                     }
@@ -1790,7 +1759,6 @@ main {
                                         top: 190px;
                                         left: 100px;
                                         width: 235px;
-
                                     }
 
                                     &:nth-of-type(3) {
@@ -1833,14 +1801,10 @@ main {
                                                     width: 100%;
                                                     text-transform: capitalize;
 
-                                                    &:first-of-type {}
-
                                                     &:nth-of-type(2) {
                                                         margin: 3px 0 7px;
                                                         color: #080075;
                                                     }
-
-                                                    &:nth-of-type(3) {}
 
                                                     &:last-of-type {
                                                         color: #080075;
@@ -2002,12 +1966,8 @@ main {
                                                         color: white;
                                                         border-radius: 50%;
                                                     }
-
-                                                    &:last-of-type {}
                                                 }
-
                                             }
-
                                         }
 
                                         >span {
@@ -2138,8 +2098,6 @@ main {
                                                                     align-items: center;
                                                                 }
 
-                                                                >i {}
-
                                                                 >span {
                                                                     color: white;
                                                                     width: 15px;
@@ -2155,6 +2113,7 @@ main {
 
                                                             &:nth-of-type(2) {
                                                                 >span {
+
                                                                     >i {
                                                                         background-color: #faeed2;
                                                                     }
@@ -2163,6 +2122,7 @@ main {
 
                                                             &:nth-of-type(3) {
                                                                 >span {
+
                                                                     >i {
                                                                         background-color: #8278fe;
                                                                         color: white;
@@ -2172,6 +2132,7 @@ main {
 
                                                             &:nth-of-type(4) {
                                                                 >span {
+
                                                                     >span {
                                                                         background-color: #faaf00;
                                                                     }
@@ -2180,6 +2141,7 @@ main {
 
                                                             &:nth-of-type(5) {
                                                                 >span {
+
                                                                     >span {
                                                                         background-color: #ff6118;
                                                                     }
@@ -2188,6 +2150,7 @@ main {
 
                                                             &:nth-of-type(6) {
                                                                 >span {
+
                                                                     >span {
                                                                         background-color: #eea49e;
                                                                     }
@@ -2196,6 +2159,7 @@ main {
 
                                                             &:nth-of-type(7) {
                                                                 >span {
+
                                                                     >span {
                                                                         background-color: #7f7dfc;
                                                                     }
@@ -2204,6 +2168,7 @@ main {
 
                                                             &:nth-of-type(8) {
                                                                 >span {
+
                                                                     >i {
                                                                         background-color: black;
                                                                         color: white;
@@ -2213,6 +2178,7 @@ main {
 
                                                             &:nth-of-type(9) {
                                                                 >span {
+
                                                                     >i {
                                                                         background-color: ghostwhite;
                                                                         color: orange;
@@ -2222,18 +2188,18 @@ main {
 
                                                             &:nth-of-type(10) {
                                                                 >span {
+
                                                                     >span {
                                                                         background-color: #ff6017;
                                                                     }
                                                                 }
                                                             }
 
-
-
                                                             &:last-of-type {
                                                                 border: none;
 
                                                                 >span {
+
                                                                     >span {
                                                                         background-color: #fab000;
                                                                     }
@@ -2245,18 +2211,13 @@ main {
                                             }
                                         }
                                     }
-
-
                                 }
-
-
                             }
 
                             &:hover {
 
                                 border: 1px solid #b9b9b9;
                                 transform: scale(1.01);
-
 
                                 >div {
                                     &:first-of-type {
@@ -2269,7 +2230,6 @@ main {
                                 }
                             }
                         }
-
                     }
 
                     /* following */
@@ -2460,8 +2420,6 @@ main {
                     /* dots */
                     &:nth-of-type(2) {
                         height: 520px;
-                        /* background: #1876c8;
-                        background: radial-gradient(circle farthest-corner at bottom center, #1876c8 0%, #f8fafd 80%); */
                         position: relative;
 
                         >img {
@@ -2552,8 +2510,6 @@ main {
                 /* hertz */
                 &:nth-of-type(3) {
 
-
-
                     >figure {
                         width: 100%;
                         height: 530px;
@@ -2599,14 +2555,12 @@ main {
                                     color: var(--textblack);
                                 }
                             }
-
                         }
 
                         /* under img */
                         &:nth-of-type(2) {
                             justify-content: space-between;
                             margin-bottom: 50px;
-
 
                             >p {
                                 color: var(--textlight);
@@ -2718,7 +2672,6 @@ main {
                                     }
                                 }
                             }
-
                         }
 
                         /* Build a foundation */
@@ -2764,7 +2717,6 @@ main {
                                             font-size: 14px;
                                         }
 
-
                                         &:hover {
                                             background-color: #4032c8;
                                         }
@@ -2800,10 +2752,10 @@ main {
 
                             /* moving box */
                             >div {
-                                width: 100%;
+                                /* width: 100%; */
                                 display: flex;
                                 column-gap: 20px;
-                                animation: carrossel 20s linear infinite;
+                                animation: carrossel 30s linear infinite;
 
                                 >a {
                                     width: 330px;
@@ -2852,7 +2804,6 @@ main {
                                     &:hover {
                                         transform: scale(1.05);
                                     }
-
                                 }
 
                                 &:hover {
@@ -2908,7 +2859,6 @@ main {
                                     column-gap: 5px;
                                     transition: 0.4s;
                                     width: 100%;
-
                                 }
 
                                 &:hover {
@@ -2945,8 +2895,6 @@ main {
                             >div {
                                 width: 100%;
 
-
-
                                 >a {
                                     width: fit-content;
                                     font-size: 15px;
@@ -2964,11 +2912,9 @@ main {
                                         font-size: 14px;
                                     }
 
-
                                     &:hover {
                                         background-color: #4032c8;
                                     }
-
                                 }
                             }
                         }
@@ -3089,7 +3035,6 @@ main {
                                                 font-size: 12px;
                                                 text-transform: capitalize;
                                                 font-weight: bold;
-
                                             }
 
                                             >div {
@@ -3141,7 +3086,6 @@ main {
                                                         align-items: center;
                                                         border-radius: 4px;
                                                     }
-
                                                 }
 
                                                 /* 2 */
@@ -3154,8 +3098,6 @@ main {
                                                     }
 
                                                     >span {
-
-                                                        &:first-of-type {}
 
                                                         &:nth-of-type(2) {
                                                             font-size: 16px;
@@ -3181,8 +3123,6 @@ main {
                                                         align-items: center;
 
                                                         >span {
-
-                                                            &:first-of-type {}
 
                                                             &:last-of-type {
                                                                 color: #aa298b;
@@ -3256,7 +3196,6 @@ main {
                                                                     color: green;
                                                                 }
                                                             }
-
                                                         }
 
                                                         &:nth-of-type(3) {
@@ -3300,7 +3239,6 @@ main {
                                                             padding: 0 10px;
                                                             color: var(--textlight);
                                                             margin-bottom: 10px;
-
                                                         }
                                                     }
 
@@ -3326,8 +3264,6 @@ main {
                                                             }
                                                         }
                                                     }
-
-
                                                 }
 
                                                 &:nth-of-type(5) {
@@ -3362,7 +3298,6 @@ main {
                             padding: 40px 20px;
                             margin-bottom: 90px;
                             row-gap: 40px;
-
 
                             >div {
                                 width: 33.3333%;
@@ -3446,14 +3381,10 @@ main {
                                 width: 100%;
                                 transition: 0.4s;
 
-
                                 &:hover {
                                     color: var(--buttonhover);
                                 }
                             }
-
-
-
                         }
 
                         /* brands */
@@ -3489,14 +3420,8 @@ main {
                                 }
                             }
                         }
-
-
-
                     }
-
-
                 }
-
             }
         }
 
@@ -3589,7 +3514,6 @@ main {
                                 >span {
                                     color: white;
                                 }
-
                             }
                         }
 
@@ -3619,8 +3543,6 @@ main {
                                     z-index: 2;
                                     font-size: 15px;
                                 }
-
-
 
                                 /* stipe */
                                 &:nth-of-type(2) {
@@ -3664,7 +3586,6 @@ main {
                                 &:nth-of-type(7) {
                                     background-color: #533afd;
                                     transform: translate(-50%, 87px);
-
                                 }
 
                                 /* top */
@@ -3711,7 +3632,6 @@ main {
                                             animation: swaper 10s linear 3s infinite forwards;
                                         }
                                     }
-
                                 }
 
                                 /* right logo */
@@ -3743,7 +3663,6 @@ main {
                                             animation: gone 10s linear infinite 11s;
                                         }
                                     }
-
                                 }
 
                                 /* lines */
@@ -3768,7 +3687,6 @@ main {
                                             height: 163px;
                                             border-radius: 10px;
                                             transform: translate(0%, -64%);
-
                                         }
 
                                         &:nth-of-type(3) {
@@ -3790,7 +3708,6 @@ main {
                                             height: 60px;
                                             border-left: 2px dashed #3a43a6;
                                             transform: translate(50px, 143px) rotate(-32deg);
-
                                         }
 
                                         &:nth-of-type(6) {
@@ -3805,14 +3722,10 @@ main {
                                             height: 50px;
                                             border-left: 2px dashed #3a43a6;
                                             transform: translate(13px, 148px) rotate(-10deg);
-
                                         }
-
                                     }
                                 }
                             }
-
-
                         }
                     }
                 }
@@ -3862,11 +3775,7 @@ main {
                                 &:nth-of-type(3) {
                                     font-size: 48px;
                                 }
-
-
-
                             }
-
                         }
                     }
                 }
@@ -3905,7 +3814,6 @@ main {
                                 height: 300px;
                                 background-color: #122054;
                                 border-radius: 5px;
-
 
                                 /* left */
                                 &:first-of-type {
@@ -3977,8 +3885,6 @@ main {
                                                 &:last-of-type {
                                                     font-size: 20px;
                                                 }
-
-
                                             }
 
                                             >figure {
@@ -4117,7 +4023,6 @@ main {
                                             display: flex;
                                             flex-wrap: wrap;
 
-
                                             >* {
                                                 width: 100%;
                                             }
@@ -4137,8 +4042,6 @@ main {
                                                     }
                                                 }
                                             }
-
-                                            >span {}
                                         }
 
                                         /* floater */
@@ -4198,29 +4101,24 @@ main {
                                         color: var(--buttonhover);
                                     }
                                 }
-
-
                             }
                         }
 
                     }
                 }
             }
-
-
-
-
         }
 
         /*==================#2-6 WHATS HAPPENING STYLE ==================*/
         &:nth-of-type(6) {
             flex-wrap: wrap;
-            padding: 100px 20px 100px;
+            padding: 100px 0px 0px;
             justify-content: start;
             overflow: hidden;
 
             /* title */
             >h3 {
+                padding: 0 20px;
                 width: 100%;
                 color: var(--textlight);
                 font-size: 32px;
@@ -4235,14 +4133,22 @@ main {
                 }
             }
 
+
             >div {
                 width: 100%;
+                display: flex;
 
                 /* flexer */
                 &:first-of-type {
-                    display: flex;
+
+                    padding: 0 20px;
                     column-gap: 15px;
                     height: 460px;
+                    background:
+                        linear-gradient(rgba(66, 46, 182, .05) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(66, 46, 182, .05) 1px, transparent 1px);
+
+                    background-size: 160px 160px;
 
                     >figure {
                         width: 10px;
@@ -4257,7 +4163,6 @@ main {
                             object-fit: contain;
                             border-radius: 15px;
                         }
-
 
                         &:first-of-type {
                             width: 800px;
@@ -4297,10 +4202,11 @@ main {
                 }
 
                 /* under flexer */
-                &:last-of-type {
+                &:nth-of-type(2) {
                     margin-top: 40px;
-                    display: flex;
+                    padding: 0 20px 100px;
                     justify-content: space-between;
+                    border-bottom: 1px solid var(--bordercolor);
 
                     >p {
                         width: 795px;
@@ -4329,11 +4235,445 @@ main {
                         }
                     }
                 }
-            }
 
+                /* book */
+                &:nth-of-type(3) {
+                    padding: 75px 20px 100px;
+                    flex-wrap: wrap;
+                    position: relative;
+
+                    >* {
+                        width: 100%;
+                    }
+
+                    >h3 {
+                        color: var(--textlight);
+                        font-size: 32px;
+                        font-weight: normal;
+                        margin-bottom: 70px;
+
+                        &:first-of-type {
+                            color: var(--textblack);
+                        }
+
+                        &:last-of-type {
+                            margin-bottom: 70px;
+                        }
+                    }
+
+                    >div {
+                        height: 655px;
+                        display: flex;
+                        flex-wrap: wrap;
+
+                        /* blue */
+                        &:first-of-type {
+                            width: 505px;
+                            background-color: #243950;
+                            border-radius: 5px 0 0 5px;
+                            justify-content: center;
+                            align-items: center;
+                        }
+
+                        /* gray */
+                        &:nth-of-type(2) {
+                            width: 718px;
+                            background-color: #f8fafd;
+                            border-radius: 0 5px 5px 0;
+                            padding: 82px 120px;
+                            align-content: start;
+
+                            >* {
+                                width: 100%;
+                            }
+
+                            >h6 {
+                                font-weight: normal;
+                                font-size: 24px;
+
+                                &:first-of-type {
+                                    color: var(--textblack);
+                                }
+
+                                &:last-of-type {
+                                    color: var(--textlight);
+                                    margin-bottom: 35px;
+                                }
+                            }
+
+                            >p {
+                                font-size: 16px;
+                                color: var(--textlight);
+                                margin-bottom: 75px;
+                            }
+
+                            >span {
+                                font-size: 12px;
+                                width: 70%;
+                                margin-bottom: 22px;
+                            }
+
+                            >div {
+                                display: flex;
+                                column-gap: 20px;
+
+                                >span {
+                                    display: flex;
+                                    column-gap: 10px;
+                                    border: 1px solid var(--bordercolor);
+                                    padding: 5px 10px 5px 2px;
+                                    font-size: 14px;
+                                    align-items: center;
+                                    transition: 0.4s;
+
+                                    >i {
+                                        font-size: 26px;
+                                    }
+
+                                    &:hover {
+                                        border: 1px solid var(--buttonhover);
+                                        color: var(--buttoncolor);
+                                    }
+                                }
+                            }
+                        }
+
+                        /* stamp */
+                        &:nth-of-type(3) {
+                            position: absolute;
+                            width: 80px;
+                            height: 135px;
+                            top: 217px;
+                            right: 60px;
+                        }
+                    }
+                }
+            }
         }
 
+        /*==================#- READY TO STYLE ==================*/
+        &:nth-of-type(7) {
+            max-width: 100%;
+            background-color: #f8fafd;
+            border-top: 1px solid var(--bordercolor);
+            border-bottom: 1px solid var(--bordercolor);
 
+            >div {
+                padding: 90px 0;
+                max-width: 1265px;
+                border-left: 1px solid var(--bordercolor);
+                border-right: 1px solid var(--bordercolor);
+                width: 100%;
+                display: flex;
 
+                >div {
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-content: start;
+                    width: 50%;
+                    padding: 0 20px;
+
+                    /* left */
+                    &:first-of-type {
+                        gap: 20px 10px;
+
+                        >h5 {
+                            width: 100%;
+                            font-size: 32px;
+                            color: var(--textblack);
+                            font-weight: normal;
+                        }
+
+                        >span {
+                            width: 100%;
+                            color: var(--textlight);
+                            font-size: 20px;
+                            margin-bottom: 10px;
+                        }
+
+                        >a {
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            border-radius: 5px;
+                            column-gap: 7px;
+                            padding: 15px 25px;
+                            transition: 0.4s;
+
+                            &:first-of-type {
+                                color: white;
+                                background-color: #533afd;
+                            }
+
+                            &:last-of-type {
+                                color: var(--buttoncolor);
+                                border: 1px solid var(--bordercolor);
+                            }
+
+                            &:hover {
+
+                                &:first-of-type {
+                                    background-color: #4032c8;
+                                }
+
+                                &:last-of-type {
+                                    border: 1px solid var(--buttonhover);
+                                    color: var(--buttonhover);
+                                }
+                            }
+                        }
+                    }
+
+                    /* right */
+                    &:nth-of-type(2) {
+
+                        >div {
+                            width: 50%;
+                            display: flex;
+                            flex-wrap: wrap;
+                            align-content: start;
+                            row-gap: 10px;
+
+                            >i {
+                                font-size: 25px;
+                                border: 2px solid var(--bordercolor);
+                                border-radius: 3px;
+                                padding: 3px;
+                                color: var(--buttoncolor);
+                            }
+
+                            >span {
+
+                                &:first-of-type {
+                                    width: 100%;
+                                    color: var(--textblack);
+                                    margin-top: 10px;
+                                }
+
+                                &:last-of-type {
+                                    width: 80%;
+                                    color: var(--textlight);
+                                    margin-bottom: 10px;
+                                }
+                            }
+
+                            >a {
+                                width: 100%;
+                                color: var(--buttoncolor);
+                                transition: 0.4s;
+
+                                &:hover {
+                                    color: var(--buttonhover);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*=================#3 FOOTER STYLE ==================*/
+/*===================================================*/
+footer {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+    >section {
+        width: 100%;
+        background-color: #f8fafd;
+        display: flex;
+        justify-content: center;
+        max-width: 100%;
+        border-bottom: 1px solid var(--bordercolor);
+
+        /*==================#3-1 WEBSITES FOOTER STYLE ==================*/
+        &:first-of-type {
+
+            >div {
+                border-right: 1px solid var(--bordercolor);
+                border-left: 1px solid var(--bordercolor);
+                width: 100%;
+                max-width: 1265px;
+                display: flex;
+
+                >div {
+                    padding: 70px 20px 85px;
+                    width: 25%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-content: start;
+                    row-gap: 20px;
+
+                    >h6 {
+                        font-weight: normal;
+                        font-size: 16px;
+                        width: 100%;
+                    }
+
+                    >ul {
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-content: start;
+                        row-gap: 4px;
+                        margin-bottom: 60px;
+
+                        >li {
+                            width: 100%;
+                            transition: 0.4s;
+                            color: var(--textlight);
+
+                            &:hover {
+                                color: var(--textblack);
+                            }
+                        }
+                    }
+
+                    &:nth-of-type(2) {
+                        >ul {
+                            margin-bottom: 10px;
+                        }
+                    }
+                }
+            }
+        }
+
+        /*==================#3-2 AUTHOR SECTION STYLE ==================*/
+        &:last-of-type {
+            padding: 70px 0;
+            border: none;
+            border-top: 1px solid var(--bordercolor);
+            background-color: #0b0d20;
+            flex-wrap: wrap;
+            height: 110vh;
+            row-gap: 40px;
+            align-items: start;
+
+            >div {
+                display: flex;
+                justify-content: center;
+                width: 700px;
+
+                >figure {
+                    width: 500px;
+                    height: 500px;
+                    border-radius: 50%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-content: start;
+                    justify-content: center;
+                    text-align: center;
+                    color: white;
+                    position: relative;
+                    box-shadow:
+                        0 0 30px 5px rgba(66, 46, 182, .35),
+                        0 0 90px 10px rgba(108, 77, 220, .25);
+                    animation: bshadow 6s ease-in-out infinite;
+
+                    >img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        border-radius: 50%;
+                    }
+
+                    >div {
+                        width: 100%;
+                        row-gap: 30px;
+                        position: absolute;
+                        opacity: 0;
+                        top: 150px;
+                        transition: opacity 0.8s linear, top 0.4s linear;
+                        display: flex;
+                        flex-wrap: wrap;
+                        align-content: start;
+                        justify-content: center;
+                        text-align: center;
+                        padding: 50px 0;
+
+                        >div {
+                            width: 100%;
+                            text-transform: capitalize;
+
+                            >h3 {
+                                width: 100%;
+                                margin-bottom: 10px;
+                                font-weight: normal;
+                                font-size: 22px;
+                            }
+                        }
+
+                        >ul {
+                            width: 260px;
+                            ;
+                            column-gap: 20px;
+                            font-size: 25px;
+                            display: flex;
+                            justify-content: center;
+
+                            >li {
+                                display: flex;
+                                justify-content: center;
+                                flex: 1;
+                                border-radius: 50px;
+                                width: 50px;
+                                height: 50px;
+                                transition: 0.7s;
+
+                                >a {
+                                    width: 100%;
+                                    height: 100%;
+                                    border-radius: 50px;
+                                    background-color: #7C6CFF;
+                                    text-transform: capitalize;
+                                    position: relative;
+
+                                    >* {
+                                        position: absolute;
+                                        top: 50%;
+                                        left: 50%;
+                                        transform: translate(-50%, -50%);
+                                        transition: 0.4s;
+                                    }
+
+                                    >span {
+                                        opacity: 0;
+                                        font-size: 16px;
+                                    }
+                                }
+
+                                &:hover {
+                                    flex: 5;
+                                    border-radius: 50px;
+
+                                    >a {
+
+                                        >i {
+                                            opacity: 0;
+                                        }
+
+                                        >span {
+                                            opacity: 1;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &:hover {
+
+                    >figure {
+                        >div {
+                            top: 100%;
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
