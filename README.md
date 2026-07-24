@@ -1,6 +1,6 @@
 # 💳 Stripe Website
 
-This project is currently under development and is being recreated as part of my journey to improve my HTML and CSS skills.
+This project is a front-end practice project recreated as part of my journey to improve my HTML and CSS skills by building modern, interactive website layouts.
 
 ## 🚀 Live Demo
 
@@ -10,15 +10,15 @@ This project is currently under development and is being recreated as part of my
 
 ### Header
 
-Screenshot coming soon.
+![Header](https://github.com/user-attachments/assets/59a33d5f-d732-43ef-a072-abe04bfea53f)
 
 ### Content Section
 
-Screenshot coming soon.
+![Content Section](https://github.com/user-attachments/assets/890a8775-d0a3-4b09-9c30-f9c915f46612)
 
-### Footer
+### Content Section
 
-Screenshot coming soon.
+![Content Section](https://github.com/user-attachments/assets/8269c492-fb10-400d-b8b0-18379ebe85e3)
 
 ## 🎯 Project Goal
 
@@ -38,7 +38,7 @@ The purpose of this project is to practice:
 
 ## 📌 Project Status
 
-* 🚧 In Progress
+*  ✔ Completed
 * ❌ Not responsive (desktop-only)
 * 🔄 Future improvement: add responsiveness and JavaScript features
 
